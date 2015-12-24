@@ -173,7 +173,8 @@ ul#header-img h2 {
   float:right;
   width:30.5%;
   margin-top:10px;
-}
+  padding-left: 70px;
+ |}
 .search {
   background:#fff;
   border: 1px solid #ddd;
