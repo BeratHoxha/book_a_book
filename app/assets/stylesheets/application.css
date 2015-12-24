@@ -280,6 +280,7 @@ ul#header-img h2 {
   width: 100%;
   height: 100px;
   bottom: 0;
+  position: relative;
 }
 .copy{
   float:left;

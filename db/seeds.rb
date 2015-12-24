@@ -15,7 +15,10 @@ Product.create!(title: 'Programming Ruby 1.9 & 2.0',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'ruby.jpg',
-                price: 34.95)
+                price: 34.95,
+                isbn: 12345,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'HTML & CSS',
                 description:
@@ -24,7 +27,10 @@ Product.create!(title: 'HTML & CSS',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'html.jpg',
-                price: 19.95)
+                price: 19.95,
+                isbn: 1234511,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'Ruby on Rails',
                 description:
@@ -33,7 +39,10 @@ Product.create!(title: 'Ruby on Rails',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'agile.jpg',
-                price: 41.95)
+                price: 41.95,
+                isbn: 123450,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'Rubyist',
                 description:
@@ -42,7 +51,10 @@ Product.create!(title: 'Rubyist',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'rubyist.jpg',
-                price: 41.95)
+                price: 41.95,
+                isbn: 123459,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'Programming Ruby 1.9 & 2.4',
                 description:
@@ -51,7 +63,10 @@ Product.create!(title: 'Programming Ruby 1.9 & 2.4',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'ruby.jpg',
-                price: 34.95)
+                price: 34.95,
+                isbn: 123458,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'HTML & CSS1',
                 description:
@@ -60,7 +75,10 @@ Product.create!(title: 'HTML & CSS1',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'html.jpg',
-                price: 19.95)
+                price: 19.95,
+                isbn: 123457,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'Ruby on Rails 4',
                 description:
@@ -69,7 +87,10 @@ Product.create!(title: 'Ruby on Rails 4',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'agile.jpg',
-                price: 41.95)
+                price: 41.95,
+                isbn: 123456,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'Rubyist1',
                 description:
@@ -78,7 +99,10 @@ Product.create!(title: 'Rubyist1',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'rubyist.jpg',
-                price: 41.95)
+                price: 41.95,
+                isbn: 123455,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'Programming Ruby 1.7 & 2.0',
                 description:
@@ -87,16 +111,21 @@ Product.create!(title: 'Programming Ruby 1.7 & 2.0',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'ruby.jpg',
-                price: 34.95)
+                price: 34.95,
+                isbn: 123454,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'HTML5 & CSS',
                 description:
                 %{
-                  HTML & CSS is the fastest growing and most exciting dynamic language out there.
-                  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+                  HTML & CSS.
                   },
                 image_url: 'html.jpg',
-                price: 19.95)
+                price: 19.95,
+                isbn: 123453,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'Ruby on3 Rails',
                 description:
@@ -105,7 +134,10 @@ Product.create!(title: 'Ruby on3 Rails',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'agile.jpg',
-                price: 41.95)
+                price: 41.95,
+                isbn: 123452,
+                author: "David Richard",
+                category: "Technology")
 
 Product.create!(title: 'Rubyist3',
                 description:
@@ -114,7 +146,10 @@ Product.create!(title: 'Rubyist3',
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
                 image_url: 'rubyist.jpg',
-                price: 41.95)
+                price: 41.95,
+                isbn: 123451,
+                author: "David Richard",
+                category: "Technology")
 
 Contact.create!(name: 'Berat Hoxha',
                 email: 'berathoxha4@gmail.com',
