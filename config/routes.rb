@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'application/about_us' => 'application#about_us'
 
+  get 'user/new' => 'users#new'
+
   get '/login' => 'sessions#new'
 
   post '/login' => 'sessions#create'

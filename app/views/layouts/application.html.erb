@@ -2,13 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SimpleCms</title>
+  <title>Book a book</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class = "body2" style = "padding-bottom: 20%">
 	<div class="header-top">
 	   <div class="wrap"> 
 			  <div class="header-top-left">
@@ -71,26 +70,21 @@
 	</div>
 
 	<%= yield %>
- </div>
-	   <div class="footer">
-	
-		<div class="footer-bottom">
-			<div class="wrap">
-	             <div class="copy">
-			        <p>© 2014 Leoshop. All rights reserved | Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
-		         </div>
-				<div class="f-list2">
+</body>
+    <div class="footer-bottom">
+	     <div class="wrap">
+	         <div class="copy">
+			      <p>© 2014 Leoshop. All rights reserved | Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+		     </div>
+			  <div class="f-list2">
 				 <ul>
 					<li class="active"><a href="about.html">About Us</a></li> |
 					<li><a href="delivery.html">Delivery & Returns</a></li> |
 					<li><a href="delivery.html">Terms & Conditions</a></li> |
 					<li><a href="contact.html">Contact Us</a></li> 
 				 </ul>
-			    </div>
-			    <div class="clear"></div>
-		      </div>
-	     </div>
-	</div>
-
-</body>
+			  </div>
+			  <div class="clear"></div>
+		 </div>
+  </div>
 </html>

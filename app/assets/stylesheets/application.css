@@ -22,11 +22,7 @@ ol,ul{list-style:none;margin:0;padding:0;}
 blockquote,q{quotes:none;}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
 table{border-collapse:collapse;border-spacing:0;}
-/* start editing from here */
-a{text-decoration:none;}
-.txt-rt{text-align:right;}/* text align right */
-.txt-lt{text-align:left;}/* text align left */
-.txt-center{text-align:center;}/* text align center */
+
 .float-rt{float:right;}/* float right */
 .float-lt{float:left;}/* float left */
 .clear{clear:both;}/* clear float */
@@ -40,8 +36,7 @@ nav.horizontal ul li{ display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 body{
-  font-family: 'Exo 2', sans-serif;
-  background:#fff;
+  margin-bottom: 100px;
 }
 .wrap{
   width:80%;
@@ -280,8 +275,11 @@ ul#header-img h2 {
 
 .footer-bottom{
   background:#0b4b5a;
-  padding:2%;
-
+  padding:30px;
+  float: left; 
+  width: 100%;
+  height: 100px;
+  bottom: 0;
 }
 .copy{
   float:left;
