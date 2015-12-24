@@ -1,0 +1,42 @@
+<div class="banner-slider">
+  <div class="callbacks_container">
+    <ul class="rslides" id="header-img">
+      <div class="banner-img">
+        <%= image_tag("banner2.jpg") %>
+      </div>
+      <h2 style = "margin-left :300px; margin-top: 150px">A writer only begins a book.A reader finishes it.</h2>
+    </ul>
+  </div>
+</div>
+<div class="main">
+  <div class="wrap">
+    <div class="section group">
+      <div class="cont span_2_of_3">
+        <h2 class="head">Featured Products</h2>
+          <% @products.each do |product| %>   
+           <div class="col_1_of_3 span_1_of_3"  style = "width: 230px; height: 350px;">
+             <a href="single.html">
+              <div class="inner_content clearfix">
+                <div class="product_image">
+                  <%= link_to image_tag(product.image_url, class: 'img-responsive card-img-top'), store_show_path(id: product.id) %>
+                 </div>
+                <div class="price">
+                   <div class="cart-left">
+                    <p class="title"><%= link_to product.title, store_show_path(id: product.id) %></p>
+                    <div class="price1">
+                      <span class="actual"><%= number_to_currency(product.price) %></span>
+                    </div>
+                  </div>
+                  <div class="cart-right"> </div>
+                  <div class="clear"></div>
+                </div>       
+              </div>
+              </a>
+            </div>
+          <% end %>
+          <div class="top-border"> </div>
+       <div class="clear"></div>
+     </div>
+   </div>
+  </div>
+</div>

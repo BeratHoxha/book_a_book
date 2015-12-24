@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleCms</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class = "body2" style = "padding-bottom: 20%">
+	<div class="header-top">
+	   <div class="wrap"> 
+			  <div class="header-top-left">
+			  	   <div class="box">
+   				      <select tabindex="4" class="dropdown">
+							<option value="" class="label" value="">Language :</option>
+							<option value="1">English</option>
+							<option value="2">French</option>
+							<option value="3">German</option>
+					  </select>
+   				    </div>
+   				    <div class="box1">
+   				        <select tabindex="4" class="dropdown">
+							<option value="" class="label" value="">Currency :</option>
+							<option value="1">$ Dollar</option>
+							<option value="2">€ Euro</option>
+						</select>
+   				    </div>
+   				    <div class="clear"></div>
+   			 </div>
+			 <div class="cssmenu">
+				<ul>
+					<li class="active"><a href="login.html">Account</a></li> |
+					<li><a href="checkout.html">Wishlist</a></li> |
+					<li><a href="checkout.html">Checkout</a></li> |
+					<li><a href="login.html">Log In</a></li> |
+					<li><a href="register.html">Sign Up</a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+ 		</div>
+	</div>
+	<div class="header-bottom">
+	    <div class="wrap">
+			<div class="header-bottom-left">
+				<div class="logo">
+					<a href="index.html"><%= image_tag("logo.png") %></a>
+				</div>
+				<div class="menu">
+	            <ul class="megamenu skyblue">
+			<li class="active grid"><a href="index.html">Home</a></li>
+			<li><a class="color4" href="#">women</a></li>				
+				<li><a class="color5" href="#">Men</a></li>
+				<li><a class="color6" href="other.html">Other</a></li>
+				<li><a class="color7" href="other.html">Purchase</a></li>
+			</ul>
+			</div>
+		</div>
+	   <div class="header-bottom-right">
+         <div class="search">	  
+				<input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+				<input type="submit" value="Subscribe" id="submit" name="submit">
+				<div id="response"> </div>
+		 </div>
+	  <div class="tag-list">
+	    <ul class="icon1 sub-icon1 profile_img">
+			<li><a class="active-icon c1" href="#"> </a>
+				<ul class="sub-icon1 list"></ul>
+			</li>
+		</ul>
+		<ul class="icon1 sub-icon1 profile_img">
+			<li><a class="active-icon c2" href="#"> </a>
+				<ul class="sub-icon1 list"></ul>
+			</li>
+		</ul>
+	  </div>
+    </div>
+     <div class="clear"></div>
+     </div>
+	</div>
+
+	<%= yield %>
+ </div>
+	   <div class="footer">
+	
+		<div class="footer-bottom">
+			<div class="wrap">
+	             <div class="copy">
+			        <p>© 2014 Leoshop. All rights reserved | Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+		         </div>
+				<div class="f-list2">
+				 <ul>
+					<li class="active"><a href="about.html">About Us</a></li> |
+					<li><a href="delivery.html">Delivery & Returns</a></li> |
+					<li><a href="delivery.html">Terms & Conditions</a></li> |
+					<li><a href="contact.html">Contact Us</a></li> 
+				 </ul>
+			    </div>
+			    <div class="clear"></div>
+		      </div>
+	     </div>
+	</div>
+
+</body>
+</html>

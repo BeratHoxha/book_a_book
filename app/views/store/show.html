@@ -1,0 +1,24 @@
+<section class="show-product left-right" style = "padding-top: 100px">
+	<div class="container">
+	<p id="notice"><%= notice %></p>
+		<div class="col-lg-4">
+			<%= image_tag(@product.image_url, size: '300x300', class: 'img-responsive img-rounded') %>
+		</div>
+		<div class="col-lg-6">
+		<h1 class="jumbotron-heading"><%= @product.title %></h1>
+		<h3 class="text-muted"><%= number_to_currency(@product.price) %></h3>
+		
+		<ul class="product-details">
+		<li>
+			<h4>Description</h4>
+			<%= strip_tags(@product.description) %>
+		</li>
+		<li>
+	</ul>
+		</div>
+	</div>
+</section>
+<div class="tools container">
+    <%= button_to 'Add to Cart', line_items_path(product_id: @product), form_class: 'add-to-cart' %>
+	<%= link_to 'Back', store_path, class: 'btn btn-default', id: 'back_button'%>
+</div>
