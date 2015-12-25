@@ -19,6 +19,10 @@ class Product < ActiveRecord::Base
     where("title LIKE ?", "%#{search}%") 
   end
 
+  def self.search_by_category(search)
+     where("category LIKE ?", "%#{search}%") 
+  end
+
   private
 
   def ensure_no_referenced_by_any_line_item

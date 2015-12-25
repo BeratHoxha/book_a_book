@@ -114,7 +114,7 @@ Product.create!(title: 'Programming Ruby 1.7 & 2.0',
                 price: 34.95,
                 isbn: 123454,
                 author: "David Richard",
-                category: "Technology")
+                category: "Children")
 
 Product.create!(title: 'HTML5 & CSS',
                 description:
@@ -125,7 +125,7 @@ Product.create!(title: 'HTML5 & CSS',
                 price: 19.95,
                 isbn: 123453,
                 author: "David Richard",
-                category: "Technology")
+                category: "Children")
 
 Product.create!(title: 'Ruby on3 Rails',
                 description:
@@ -137,7 +137,7 @@ Product.create!(title: 'Ruby on3 Rails',
                 price: 41.95,
                 isbn: 123452,
                 author: "David Richard",
-                category: "Technology")
+                category: "Children")
 
 Product.create!(title: 'Rubyist3',
                 description:
@@ -149,7 +149,7 @@ Product.create!(title: 'Rubyist3',
                 price: 41.95,
                 isbn: 123451,
                 author: "David Richard",
-                category: "Technology")
+                category: "Children")
 
 Contact.create!(name: 'Berat Hoxha',
                 email: 'berathoxha4@gmail.com',

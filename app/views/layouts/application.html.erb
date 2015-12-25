@@ -25,8 +25,9 @@
 				<ul>
 					<li class="active"><a href="login.html">Account</a></li> |
 					<li><a href="checkout.html">Checkout</a></li> |
-					<li><a href="login.html">Log In</a></li> |
-					<li><a href="register.html">Sign Up</a></li>
+					<li><%= link_to 'Sign in', login_path %></li> |
+					<li><%= link_to 'Sign up', user_new_path %></li> |
+
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -36,7 +37,7 @@
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-					<a href="index.html"><%= image_tag("logo.png") %></a>
+					<%=link_to image_tag("logo.png"), store_path %>
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">

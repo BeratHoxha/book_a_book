@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'user/new' => 'users#new'
 
+  post 'user/new' => 'users#create'
+
   get '/login' => 'sessions#new'
 
   post '/login' => 'sessions#create'

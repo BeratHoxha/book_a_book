@@ -4,8 +4,8 @@
       <div class="banner-img">
         <%= image_tag("banner2.jpg") %>
       </div>
-      <h2 style = "margin-left :580px; margin-top: 150px">Today a reader</h2>
-      <h2 style = "margin-left :550px; margin-top: 200px">Tomorrow a leader</h2>
+      <h2 style = "margin-left :460px; margin-top: 120px">Today a reader</h2>
+      <h2 style = "margin-left :420px; margin-top: 170px">Tomorrow a leader</h2>
     </ul>
   </div>
 </div>
@@ -13,27 +13,29 @@
   <div class="wrap">
     <div class="section group">
       <div class="cont span_2_of_3" style = "margin-left:-40px">
-        <h2 class="head">Featured Products</h2>
-          <% @products.each do |product| %>   
-           <div class="col_1_of_3 span_1_of_3"  style = "width: 230px; height: 350px;">
-             <a href="single.html">
-              <div class="inner_content clearfix">
-                <div class="product_image">
-                  <%= link_to image_tag(product.image_url, class: 'img-responsive card-img-top'), store_show_path(id: product.id) %>
-                 </div>
-                <div class="price">
-                   <div class="cart-left">
-                    <p class="title"><%= link_to product.title, store_show_path(id: product.id) %></p>
-                    <div class="price1">
-                      <span class="actual"><%= number_to_currency(product.price) %></span>
-                    </div>
+           <% @products.each do |category, products| %> 
+             <h2 class="head"><%= category %></h2>
+             <%products.each do |product| %>
+               <div class="col_1_of_3 span_1_of_3"  style = "width: 230px; height: 350px;">
+                 <a href="single.html">
+                  <div class="inner_content clearfix">
+                    <div class="product_image">
+                      <%= link_to image_tag(product.image_url, class: 'img-responsive card-img-top'), store_show_path(id: product.id) %>
+                     </div>
+                    <div class="price">
+                       <div class="cart-left">
+                        <p class="title"><%= link_to product.title, store_show_path(id: product.id) %></p>
+                        <div class="price1">
+                          <span class="actual"><%= number_to_currency(product.price) %></span>
+                        </div>
+                      </div>
+                      <div class="cart-right"> </div>
+                      <div class="clear"></div>
+                    </div>       
                   </div>
-                  <div class="cart-right"> </div>
-                  <div class="clear"></div>
-                </div>       
-              </div>
-              </a>
-            </div>
+                  </a>
+                </div>
+              <%end%>
           <% end %>
           <div class="top-border"> </div>
        <div class="clear"></div>
