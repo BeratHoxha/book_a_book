@@ -68,85 +68,167 @@ Product.create!(title: 'Programming Ruby 1.9 & 2.4',
                 author: "David Richard",
                 category: "Technology")
 
-Product.create!(title: 'HTML & CSS1',
+Product.create!(title: 'The Personal MBA',
                 description:
                 %{
-                  HTML & CSS is the fastest growing and most exciting dynamic language out there.
-                  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+                  Getting an MBA (Master the Art of Business) is an expensive choice-one almost impossible to justify regardless of the state of the economy.
                   },
-                image_url: 'html.jpg',
-                price: 19.95,
+                image_url: 'business2.jpg',
+                price: 31.64,
                 isbn: 123457,
-                author: "David Richard",
-                category: "Technology")
+                author: "Josh Kaufman",
+                category: "Business")
 
-Product.create!(title: 'Ruby on Rails 4',
+Product.create!(title: 'The Entrepreneur Mind',
                 description:
                 %{
-                  Rails is the fastest growing and most exciting dynamic language out there.
-                  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+                  To achieve unimaginable business success and financial wealth—to reach the upper echelons of entrepreneurs, 
+                  where you’ll find Mark Zuckerberg of Facebook, Sara Blakely of Spanx, Mark Pincus of Zynga,
                   },
-                image_url: 'agile.jpg',
-                price: 41.95,
+                image_url: 'business1.jpg',
+                price: 14.63,
                 isbn: 123456,
-                author: "David Richard",
-                category: "Technology")
+                author: "Kevin D. Johnson",
+                category: "Business")
 
-Product.create!(title: 'Rubyist1',
+Product.create!(title: 'The 7 Habits of Effective People',
                 description:
                 %{
-                  Rails is the fastest growing and most exciting dynamic language out there.
-                  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+                  One of the most inspiring and impactful books ever written, The 7 Habits of Highly Effective People has captivated readers for 25 years.
                   },
-                image_url: 'rubyist.jpg',
-                price: 41.95,
+                image_url: 'business3.jpg',
+                price: 23.36,
                 isbn: 123455,
-                author: "David Richard",
-                category: "Technology")
+                author: " Stephen R. Covey",
+                category: "Business")
 
-Product.create!(title: 'Programming Ruby 1.7 & 2.0',
+Product.create!(title: 'Think and Grow Rich',
                 description:
                 %{
-                  Ruby is the fastest growing and most exciting dynamic language out there.
-                  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
-                  },
-                image_url: 'ruby.jpg',
+                  Think and Grow Rich has been called the \"Granddaddy of All Motivational Literature.\" It was the first book to boldly ask, \"What makes a winner?\"
+                  }, 
+                image_url: 'business4.jpg',
                 price: 34.95,
                 isbn: 123454,
+                author: " Napoleon Hill",
+                category: "Business",
                 author: "David Richard",
                 category: "Children")
 
-Product.create!(title: 'HTML5 & CSS',
+Product.create!(title: 'The Power of Positive Thinking ',
                 description:
                 %{
-                  HTML & CSS.
+                  An international bestseller with over five million copies in print, The Power of Positive Thinking has helped men and women around the world to achieve fulfillment in their lives through Dr. Norman Vincent Peale’s powerful message of faith and inspiration
                   },
-                image_url: 'html.jpg',
-                price: 19.95,
+                image_url: 'business5.jpg',
+                price: 23.14,
                 isbn: 123453,
+                author: " Dr. Norman Vincent Peale",
+                category: "Business",
                 author: "David Richard",
                 category: "Children")
 
-Product.create!(title: 'Ruby on3 Rails',
+Product.create!(title: 'George Washington\'s Secret Six',
                 description:
                 %{
-                  Rails is the fastest growing and most exciting dynamic language out there.
-                  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+                  When George Washington beat a hasty retreat from New York City in August 1776, many thought the American Revolution might soon be over. Instead, Washington rallied—thanks in large part to a little-known, top-secret group called the Culper Spy Ring. 
                   },
-                image_url: 'agile.jpg',
-                price: 41.95,
+                image_url: 'history1.jpg',
+                price: 44.95,
                 isbn: 123452,
+                author: "Brian Kilmeade",
+                category: "History")
+
+Product.create!(title: 'Killing Reagan: The Violent Assault',
+                description:
+                %{
+                 From the bestselling team of Bill O'Reilly and Martin Dugard comes Killing Reagan, a page-turning epic account of the career of President Ronald Reagan that tells the vivid story of his rise to power -- and the forces of evil that conspired to bring him down.
+                  },
+                image_url: 'history2.jpg',
+                price: 46.49,
+                isbn: 1234512,
+                author: " Bill O'Reilly ",
+                category: "History",
                 author: "David Richard",
                 category: "Children")
 
-Product.create!(title: 'Rubyist3',
+Product.create!(title: 'The Wright Brothers',
                 description:
                 %{
                   Rails is the fastest growing and most exciting dynamic language out there.
                   If you need to get working programs delivered fast, you should add Ruby to your toolbox.
                   },
-                image_url: 'rubyist.jpg',
+                image_url: 'history3.jpg',
+                price: 49.32,
+                isbn: 1234513,
+                author: "DDavid McCullough",
+                category: "History")
+
+Product.create!(title: 'All the Light We Cannot See',
+                description:
+                %{
+                 From the highly acclaimed, multiple award-winning Anthony Doerr, the beautiful, stunningly ambitious instant New York Times bestseller about a blind French girl and a German boy whose paths collide in occupied France as both try to survive the devastation of World War II.
+                  },
+                image_url: 'history4.jpg',
                 price: 41.95,
+                isbn: 1234514,
+                author: "Anthony Doerr",
+                category: "History")
+
+Product.create!(title: 'The Life We Bury',
+                description:
+                %{
+                  College student Joe Talbert has the modest goal of completing a writing assignment for an English class. His task is to interview a stranger and write a brief biography of the person. With deadlines looming, Joe heads to a nearby nursing home to find a willing subject. There he meets Carl Iverson, and soon nothing in Joe's life is ever the same.
+                  },
+                image_url: 'history5.jpg',
+                price: 36.99,
+                isbn: 1234515,
+                author: "Allen Eskens",
+                category: "History")
+
+Product.create!(title: 'Step-Up to Medicine',
+                description:
+                %{
+                  Now thoroughly updated and revised, this best-selling volume in the popular Step-Up series provides a high-yield review of medicine, ideal for preparing for clerkships or clinical rotations, shelf exams, and the USMLE Step 2. 
+                  },
+                image_url: 'other1.jpg',
+                price: 40.10,
+                isbn: 12345151,
+                author: "Steven Agabegi",
+                category: "Other")
+
+Product.create!(title: 'Willy the Whale',
+                description:
+                %{
+                  Are you looking for a children's book that is highly entertaining, great for beginning readers, and is jam-packed with stories, jokes, and more?
+                  },
+                image_url: 'other2.jpg',
+                price: 36.99,
+                isbn: 12345152,
+                author: " Uncle Amon",
+                category: "other")
+
+Product.create!(title: 'The Football Decision',
+                description:
+                %{
+                  Neurosurgeon Uzma Samadani, M.D, Ph.D, and emergency medicine physician Robert Glatter, M.D wrote this book to provide parents with a comprehensive evidence-based approach for navigating the plethora of data surrounding the risks and benefits of contact sports.
+                  },
+                image_url: 'other3.jpg',
+                price: 6.99,
+                isbn: 12345153,
+                author: "Uzma Samadani",
+                category: "other")
+
+Product.create!(title: 'The Future of Architecture',
+                description:
+                %{
+                  The founder of Architizer.com and practicing architect draws on his unique position at the crossroads of architecture and social media to highlight 100 important buildings that embody the future of architecture.
+                  },
+                image_url: 'other4.jpg',
+                price: 36.99,
+                isbn: 12345154,
+                author: "Marc Kushner",
+                category: "other",
                 isbn: 123451,
                 author: "David Richard",
                 category: "Children")
@@ -181,6 +263,6 @@ Contact.create!(name: 'admin',
                 message: 'admin'
                 )
 
-User.create!(name: "admin", email: "admin@gmail.com", password: "admin")
+User.create!(name: "admin", email: "admin@gmail.com ", password: "admin")
 # ...
 puts 'Completed.'

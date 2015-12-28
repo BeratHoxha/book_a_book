@@ -1,9 +1,11 @@
 class StoreController < ApplicationController
   before_filter :authorize, only: ['show']
  def index
-    products_tek = Product.search_by_category('Technology').first(4)
-    products_child = Product.search_by_category('Children').first(4)
-    @products = { 'Technology' => products_tek, 'Children' => products_child }
+    products_technology = Product.search_by_category('Technology').first(4)
+    products_business = Product.search_by_category('Business').first(4)
+    products_history = Product.search_by_category('History').first(4)
+    products_other = Product.search_by_category('Other').first(4)
+    @products = { 'Technology' => products_technology, 'Business' => products_business, 'History' => products_history, 'Other' => products_other }
       if params[:search]
           if !(Product.search(params[:search]).empty?) 
             @products = { 
