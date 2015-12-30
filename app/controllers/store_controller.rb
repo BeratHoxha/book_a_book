@@ -9,7 +9,7 @@ class StoreController < ApplicationController
       if params[:search]
           if !(Product.search(params[:search]).empty?) 
             @products = { 
-                'Product that you serched:' => Product.search(params[:search]).order("created_at DESC") 
+                'Products that you serched:' => Product.search(params[:search]).order("created_at DESC") 
               }
         else 
             @error = "\"#{params[:search].capitalize}\" not found"

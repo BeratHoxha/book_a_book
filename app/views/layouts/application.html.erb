@@ -25,7 +25,11 @@
 				<ul>
 					<li class="active"><a href="login.html">Account</a></li> |
 					<li><a href="checkout.html">Checkout</a></li> |
-					<li><%= link_to 'Sign in', login_path %></li> |
+					<% if current_user %>
+						<li><%= link_to "Logout", logout_path %></li> |
+				    <% else %>
+					    <li><%= link_to 'Log in', login_path %></li> |
+					<% end %>
 					<li><%= link_to 'Sign up', user_new_path %></li> |
 
 				</ul>
@@ -49,19 +53,18 @@
 		</div>
 	   <div class="header-bottom-right">
          <div class="search">	  
-				<input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" >
-				  <%= submit_tag "Search" %>
+			<form action="" >
+				<input type="text" name="search" class="textbox" class="form-control" value="Search" name="search" id="search" onfocus="this.value = '';" >
+			    <%= submit_tag "Search" %>
 				<div id="response"> </div>
+			</form>
 		 </div>
 	  <div class="tag-list">
 	    <ul class="icon1 sub-icon1 profile_img">
 			<li><a class="active-icon c1" href="#"> </a>
-				<ul class="sub-icon1 list"></ul>
 			</li>
-		</ul>
-		<ul class="icon1 sub-icon1 profile_img">
-			<li><a class="active-icon c2" href="#"> </a>
-				<ul class="sub-icon1 list"></ul>
+			<li>
+			  <%=link_to '',  cart_path(current_user.cart_id), :class => "active-icon c2"  if current_user.cart_id%>
 			</li>
 		</ul>
 	  </div>

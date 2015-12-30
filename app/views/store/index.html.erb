@@ -13,6 +13,9 @@
   <div class="wrap">
     <div class="section group">
       <div class="cont span_2_of_3" style = "margin-left:-40px">
+           <% if @error %>
+              <h1 class = 'error'> <%= @error %> </h1>
+           <% end %>
            <% @products.each do |category, products| %> 
              <h2 class="head"><%= category %></h2>
              <%products.each do |product| %>

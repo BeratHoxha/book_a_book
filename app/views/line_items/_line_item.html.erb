@@ -1,5 +1,5 @@
 <div class="show_card-block">
-	<h4 class="card-title"><%= link_to line_item.product.title, product_path(line_item.product) %></h4>
+	<h4 class="card-title"><%= link_to line_item.product.title, store_path(line_item.product) %></h4>
 	<strong class="card-title"><%= number_to_currency(line_item.total_price) %></strong>
 	
 	<p class="card-title"><%= format_qty_value(line_item.quantity) %></p>
