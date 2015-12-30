@@ -9,8 +9,7 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
-
+  <% end %><pre style="color:#fff;">
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name, size: 40 %>
@@ -22,12 +21,12 @@
   <div class="field">
     <%= f.label :email %><br>
     <%= f.email_field :email %>
-  </div>
-  <div class="field">
+  </div></pre>
+  <div class="field" style="color:#000;">
     <%= f.label :pay_type %><br>
     <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %>
-  </div>
-  <div class="actions">
+  </div><br>
+  <div class="actions" style="color:#000;">
     <%= f.submit 'Place Order' %>
   </div>
 <% end %>
