@@ -8,7 +8,7 @@
 
 Product.delete_all
 # ...
-Product.create!(title: 'Programming Ruby 1.9 & 2.0',
+Product.create!(title: '--------------------Programming Ruby 1.9 & 2.0',
                 description:
                 %{
                   Ruby is the fastest growing and most exciting dynamic language out there.
@@ -20,28 +20,26 @@ Product.create!(title: 'Programming Ruby 1.9 & 2.0',
                 author: "David Richard",
                 category: "Technology")
 
-Product.create!(title: 'HTML & CSS',
+Product.create!(title: 'HTML and CSS',
                 description:
                 %{
-                  HTML & CSS is the fastest growing and most exciting dynamic language out there.
-                  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+                  Every day, more and more people want to learn some HTML and CSS. Joining the professional web designers and programmers are new audiences who need to know a little bit of code at work (update a content management system or e-commerce store)
                   },
                 image_url: 'html.jpg',
                 price: 19.95,
                 isbn: 1234511,
-                author: "David Richard",
+                author: "Jon Duckett ",
                 category: "Technology")
 
-Product.create!(title: 'Ruby on Rails',
+Product.create!(title: 'Agile Web Development',
                 description:
                 %{
-                  Rails is the fastest growing and most exciting dynamic language out there.
-                  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+                  Rails just keeps on changing. Both Rails 3 and 4, as well as Ruby 1.9 and 2.0, bring hundreds of improvements, including new APIs and substantial performance enhancements.
                   },
                 image_url: 'agile.jpg',
                 price: 41.95,
                 isbn: 123450,
-                author: "David Richard",
+                author: "Dave Thomas",
                 category: "Technology")
 
 Product.create!(title: 'Rubyist',
@@ -56,16 +54,15 @@ Product.create!(title: 'Rubyist',
                 author: "David Richard",
                 category: "Technology")
 
-Product.create!(title: 'Programming Ruby 1.9 & 2.4',
+Product.create!(title: 'Beginning Ruby',
                 description:
                 %{
-                  Ruby is the fastest growing and most exciting dynamic language out there.
-                  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+                  Based on the bestselling first edition, Beginning Ruby: From Novice to Professional, Second Edition is the leading guide for every type of reader who wants to learn Ruby from the ground up.
                   },
-                image_url: 'ruby.jpg',
-                price: 34.95,
+                image_url: 'beg-ruby.jpg',
+                price: 17.95,
                 isbn: 123458,
-                author: "David Richard",
+                author: "Peter Cooper",
                 category: "Technology")
 
 Product.create!(title: 'The Personal MBA',
@@ -111,9 +108,7 @@ Product.create!(title: 'Think and Grow Rich',
                 price: 34.95,
                 isbn: 123454,
                 author: " Napoleon Hill",
-                category: "Business",
-                author: "David Richard",
-                category: "Children")
+                category: "Business")
 
 Product.create!(title: 'The Power of Positive Thinking ',
                 description:
@@ -124,9 +119,7 @@ Product.create!(title: 'The Power of Positive Thinking ',
                 price: 23.14,
                 isbn: 123453,
                 author: " Dr. Norman Vincent Peale",
-                category: "Business",
-                author: "David Richard",
-                category: "Children")
+                category: "Business")
 
 Product.create!(title: 'George Washington\'s Secret Six',
                 description:
@@ -148,9 +141,7 @@ Product.create!(title: 'Killing Reagan: The Violent Assault',
                 price: 46.49,
                 isbn: 1234512,
                 author: " Bill O'Reilly ",
-                category: "History",
-                author: "David Richard",
-                category: "Children")
+                category: "History")
 
 Product.create!(title: 'The Wright Brothers',
                 description:
@@ -228,10 +219,7 @@ Product.create!(title: 'The Future of Architecture',
                 price: 36.99,
                 isbn: 12345154,
                 author: "Marc Kushner",
-                category: "other",
-                isbn: 123451,
-                author: "David Richard",
-                category: "Children")
+                category: "other")
 
 Contact.create!(name: 'Berat Hoxha',
                 email: 'berathoxha4@gmail.com',

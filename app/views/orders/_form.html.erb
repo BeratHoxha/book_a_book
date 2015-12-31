@@ -1,32 +1,41 @@
-<%= form_for(@order) do |f| %>
-  <% if @order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+<div id = "body_new-user" class="container-fluid";>
+ <header >
+  <div align="center"><h1> Checkout </h1></div>
+</header>       
+<div  class="form">
+  <%= form_for(@order) do |f| %>
+    <% if @order.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
 
-      <ul>
-      <% @order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p class="contact"><%= f.label :name %></p>
+    <%= f.text_field :name, id: 'name', placeholder: 'First and last name' %>
+
+    <p class="contact"><%= f.label :email %></p>
+    <%= f.email_field :email, id: 'email', placeholder: 'example@domain.com'%>
+
+    <p class="contact"><%= f.label :address %></p> 
+    <%= f.text_area :address, rows: 3, cols: 52, placeholder: 'Full address'  %>
+
+
+    <p class="contact"><%= f.label :pay_type%></p>
+    <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Payment method' %>
+
+    <br><br>
+    <div style="margin-top:30px; padding-bottom:30px;">
+      <%= f.submit 'Place Order', class: 'btn btn-primary' %>
+      <div style="margin: -52px 0 0 325px"><%= link_to 'Back', store_path, class: 'btn btn-success' %></div>
     </div>
-  <% end %><pre style="color:#fff;">
-  <div class="field">
-    <%= f.label :name, style: "color: black"%><br>
-    <%= f.text_field :name, size: 40 %>
-  </div>
-  <div class="field">
-    <%= f.label :address, style: "color: black"%><br>
-    <%= f.text_area :address, rows: 3, cols: 40, style: "border: 1px solid darkgrey"  %>
-  </div>
-  <div class="field">
-    <%= f.label :email, style: "color: black"%><br>
-    <%= f.email_field :email%>
-  </div></pre>
-  <div class="field">
-    <%= f.label :pay_type, style: "color: black"%><br>
-    <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %>
-  </div><br>
-  <div class="actions">
-    <%= f.submit 'Place Order' %>
-  </div>
-<% end %>
+  <% end %>
+
+</div>      
+</div>
+</div>

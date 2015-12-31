@@ -23,15 +23,14 @@
    			 </div>
 			 <div class="cssmenu">
 				<ul>
-					<li class="active"><a href="login.html">Account</a></li> |
-					<li><a href="checkout.html">Checkout</a></li> |
+					<li><a href="#">Checkout</a></li> |
 					<% if current_user %>
+						<li><%= link_to "Account", user_show_path %></li> |
 						<li><%= link_to "Logout", logout_path %></li> |
 				    <% else %>
 					    <li><%= link_to 'Log in', login_path %></li> |
+					    <li><%= link_to 'Sign up', user_new_path %></li> |
 					<% end %>
-					<li><%= link_to 'Sign up', user_new_path %></li> |
-
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -45,9 +44,9 @@
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
-				<li class="active grid"><a href="index.html">Home</a></li>
+				<li class="active grid"><%=link_to "Home", store_path %></li>
 				<li><a class="color4" href="#">Category</a></li>				
-				<li><a class="color6" href="other.html">Other</a></li>
+				<li><a class="color6" href="#">Other</a></li>
 			</ul>
 			</div>
 		</div>
