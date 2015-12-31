@@ -7,8 +7,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body> 
-   <div class = "body2">
+<body>
 	<div class="header-top">
 	   <div class="wrap"> 
 			  <div class="header-top-left">
@@ -64,11 +63,11 @@
 	    <ul class="icon1 sub-icon1 profile_img">
 			<li><a class="active-icon c1" href="#"> </a>
 			</li>
-			<% if current_user %>
 			<li>
-			  <%=link_to '',  cart_path(current_user.cart_id), :class => "active-icon c2"  if current_user.cart_id%>
-			</li>
+			<% if current_user %> 
+					<%=link_to '', cart_path(current_user.cart_id), :class => "active-icon c2" if current_user.cart_id%>
 			<% end %>
+			</li> 
 		</ul>
 	  </div>
     </div>
@@ -77,22 +76,20 @@
 	</div>
 
 	<%= yield %>
- 	 </div>
-	    <div class="footer-bottom">
+</body>
+    <div class="footer-bottom">
 	     <div class="wrap">
 	         <div class="copy">
-			      <p>© 2014 Leoshop. All rights reserved | Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+			       <p>&copy <%=Time.now.year  %>  BOOK A BOOK | All Rights Reserved. </p>
 		     </div>
 			  <div class="f-list2">
 				 <ul>
-					<li class="active"><a href="about.html">About Us</a></li> |
-					<li><a href="delivery.html">Delivery & Returns</a></li> |
-					<li><a href="delivery.html">Terms & Conditions</a></li> |
-					<li><a href="contact.html">Contact Us</a></li> 
+					<li><%= link_to "About us", application_about_us_path %></li>
+					<li><%= link_to "Contact", new_contact_path %></li>
+					<li><%= link_to "Privacy Policy", application_privacy_path %></li>
 				 </ul>
 			  </div>
 			  <div class="clear"></div>
 		 </div>
   </div>
-</body>
 </html>

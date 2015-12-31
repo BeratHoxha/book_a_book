@@ -1,48 +1,60 @@
-<div class = 'container' style = 'padding-top:80px;'>
-    <% if @contact.errors.any? %>
+<section class="jumbotron text-center" style="height:520px; background: url('/assets/contact.jpg')">
+<div class = "container-fluid">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading"  style="color:#0275d8; font-family: Impact, sans-serif; font-size:23px;">
+            <h1>Contact Us</h1>
+            <hr style="max-width: 200px;margin: 15px auto;border-width: 4px;border-color: #000;">
+            <span class="subheading">Have questions?  We have answers.</span>
+        </div>
+    </div>
+</div>
+</section>
+
+<div class="container-fluid">      
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+
+      <% if @contact.errors.any? %>
       <div id="error_explanation">
-         <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this product from being saved:</h2>
+        <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this product from being saved:</h2>
         <ul>
         <% @contact.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
         </ul>
       </div>
-    <% end %>
-  <div id="contact-map">
-        <p><pre>Our Contacts</pre></p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11735.604502973776!2d21.16542862193219!3d42.663450615818405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1450381270782" width="760" height="480" frameborder="4"  allowfullscreen></iframe>
+      <% end %>
 
-  </div>
+        </div>
 
-  <div class = 'contact_form' >
-    <%= form_for(@contact) do |f| %>
-      <br><pre>
+        <address id="adresa">
+               <h1>Address</h1><br>
+               Dodona, Prishtine, Kosove<br>
+               <strong>Mobile Phone:</strong>049-111-000<br>     
+               <strong>Fax:</strong>038-111-000  <br>   
+               <strong>Email:</strong> <a href="https://gmail.com/" style="color:blue">bookabook@gmail.com</a>
+        </address>
 
-      <%= f.label :name %><br>
-      <%= f.text_field :name %><br>
     
-      <%= f.label :email %><br>
-      <%= f.text_field :email %><br>
-    
-      <%= f.label :message %><br>
-      <%= f.text_area :message %><br>
-    
-      <%= f.submit %>
-  <% end %>
- </div>
+ 
 
+        <div id="form">
+           <%= form_for(@contact) do |f| %>
+             <%= f.label :name %>
+                <%= f.text_field :name, class: 'form-control'%>
+                      <br>   
+             <%= f.label :email %> 
+                <%= f.text_field :name, class: 'form-control'%>
+                      <br>
+             <%= f.label :Message %> 
+             <%= f.text_area :message, class: 'form-control' %>
+             <br>
+             <button type="submit" class="btn btn-primary">Send Message</button>
+           <% end %>
+        </div>
 
-  <div class="address">
-       <address>
-          <pre><br>
-          Dodona, Prishtine, Kosove
-          <br>
-          <%= image_tag("phone.png", :alt => "Phone") %> <b>Mobile Phone:</b>049-111-000     <b>Fax:</b>038-111-000             <%= image_tag("email.png", :alt => "Email") %>  <b> Email:</b> <a href="https://gmail.com/" style="color:blue">bookabook@gmail.com</a>
-          
-          </pre>
-      </address>
-  </div>
+        <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11735.604502973776!2d21.16542862193219!3d42.663450615818405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1450381270782" width="100%" height="280" frameborder="4" allowfullscreen></iframe>
+        </div> 
 
 </div>
-
+</div>

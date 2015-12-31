@@ -1,8 +1,25 @@
-<div class="show_card-block">
-	<h4 class="card-title"><%= link_to line_item.product.title, store_path(line_item.product) %></h4>
-	<strong class="card-title"><%= number_to_currency(line_item.total_price) %></strong>
-
-	<%= link_to 'Delete', {:controller => "line_items", :action => 'destroy', id: line_item.id} ,  data: { confirm: 'Are you sure?'},  :method => :delete, id: 'delete_book' %>
-	<p class="card-title"><%= format_qty_value(line_item.quantity) %></p>
-	<p class="show_card-text text-muted">Last updated <%= time_ago_in_words(line_item.updated_at) %></p>
-</div>
+<tr>
+   <td>
+    <div class="media">
+      <a class="thumbnail pull-left" href="#"> 
+        <%= link_to image_tag(line_item.product.image_url, style: "width: 72px; height: 72px; float:left") %>
+      </a>
+      <div class="media-body" style = "padding-left:20px" >
+        <h4 class="media-heading"><%= link_to line_item.product.title, store_path(line_item.product) %></h4>
+        <h5 class="media-heading"> by <%= link_to line_item.product.author, store_path(line_item.product) %></h5>
+      </div>
+    </div>
+  </td>
+  <td style = "float:left;">
+    <p class="card-title"><%= format_qty_value(line_item.quantity) %></p>
+  </td>
+  <td style = "float: left; padding-left: 80px;">
+    <strong class="card-title"><%= number_to_currency(line_item.product.price) %></strong>
+  </td>
+  <td  style = "float: left; padding-left: 70px;">
+   <strong class="card-title"><%= number_to_currency(line_item.total_price) %></strong>
+ </td>
+ <td>
+      <%= button_to 'Remove', line_item, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-link"%>
+</td>
+</tr>

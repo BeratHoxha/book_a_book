@@ -9,24 +9,23 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
-
+  <% end %><pre style="color:#fff;">
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, style: "color: black"%><br>
     <%= f.text_field :name, size: 40 %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address, rows: 3, cols: 40 %>
+    <%= f.label :address, style: "color: black"%><br>
+    <%= f.text_area :address, rows: 3, cols: 40, style: "border: 1px solid darkgrey"  %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
-  </div>
+    <%= f.label :email, style: "color: black"%><br>
+    <%= f.email_field :email%>
+  </div></pre>
   <div class="field">
-    <%= f.label :pay_type %><br>
+    <%= f.label :pay_type, style: "color: black"%><br>
     <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %>
-  </div>
+  </div><br>
   <div class="actions">
     <%= f.submit 'Place Order' %>
   </div>
