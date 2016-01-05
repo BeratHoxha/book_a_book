@@ -9,6 +9,7 @@ class UsersControllerTest < ActionController::TestCase
   test "should get create" do
     get :create
     assert_response :success
+    redirect_to store_path
   end
 
 end

@@ -55,6 +55,8 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     debug_inspector (0.0.2)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.6.0)
     font-awesome-rails (4.5.0.0)
@@ -202,6 +204,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   coffee-script-source (= 1.8.0)
+  email_validator
   jbuilder (~> 2.0)
   jquery-rails
   mail_form (~> 1.5.0.rc)

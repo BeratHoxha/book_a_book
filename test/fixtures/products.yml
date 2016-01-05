@@ -3,15 +3,24 @@ one:
   description: MyText1
   image_url: MyString1
   price: 9.98
+  isbn: 55
+  author: 'steeve'
+  category: 'Teknology'
 
 two: 
   title: MyString
   description: MyText
   image_url: MyString
   price: 9.99
+  isbn: 11
+  author: 'steeve'
+  category: 'Teknology'
 
 ruby:
   title: Programming Ruby 1.9
   description: Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.
   price: 49.50
   image_url: ruby.png
+  isbn: 333
+  author: 'steeve'
+  category: 'Teknology'

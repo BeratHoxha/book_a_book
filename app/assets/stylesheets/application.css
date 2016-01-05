@@ -169,7 +169,7 @@ ul#header-img h2 {
   width:30.5%;
   margin-top:10px;
   padding-left: 30px;
- |}
+ }
 .search {
   background:#fff;
   border: 1px solid #ddd;
@@ -235,7 +235,7 @@ ul#header-img h2 {
 .icon1 li:hover > a {
   color: #fafafa;
 }
-*html .icon1 li a:hover { /* IE6 only */
+.html .icon1 li a:hover { /* IE6 only */
   color: #fafafa;
 }
 

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:3000/admin/user -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+<meta content="NONE,NOARCHIVE" name="robots">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="MQ5J6axSjD1QX3eP/jzkciTNhl0A4cn1ZIg6GO7I24mlWzKtslQdNs0qnbX+w/3Q2YgokW9JiQTM/MXDl3HUpg==">
+<link rel="stylesheet" media="all" href="./user_files/rails_admin-9ca58ddae1249ff83f87d820bdd015c96d379dca72cf4ee4a9aa029c5bd9e065.css">
+<script src="./user_files/rails_admin-6c16a42c130ffaa974eb888fd79fe3c0c6fc46d4eed676ed5229a3ab130cb9c3.js"></script><style type="text/css"></style>
+<script>
+  RailsAdmin.I18n.init('en', JSON.parse("{\"true\":true,\"false\":false,\"is_present\":\"Is present\",\"is_blank\":\"Is blank\",\"date\":\"Date ...\",\"between_and_\":\"Between ... and ...\",\"today\":\"Today\",\"yesterday\":\"Yesterday\",\"this_week\":\"This week\",\"last_week\":\"Last week\",\"number\":\"Number ...\",\"contains\":\"Contains\",\"is_exactly\":\"Is exactly\",\"starts_with\":\"Starts with\",\"ends_with\":\"Ends with\",\"too_many_objects\":\"Too many objects, use search box above\",\"no_objects\":\"No objects found\"}"))
+</script>
+</head>
+<body class="rails_admin">
+<div class="label label-warning" id="loading" style="position: fixed; right: 20px; bottom: 20px; z-index: 100000; display: none;">Loading...</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed" data-target="#secondary-navigation" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand pjax" href="http://localhost:3000/admin/">
+Book A Book
+<small>Admin</small>
+</a>
+</div>
+<div class="collapse navbar-collapse" id="secondary-navigation">
+<ul class="nav navbar-nav navbar-right root_links">
+<li class="dashboard_root_link"><a class="pjax" href="http://localhost:3000/admin/">Dashboard</a></li>
+</ul>
+
+</div>
+</div>
+
+</nav>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar-nav">
+<ul class="nav nav-pills nav-stacked"><li class="dropdown-header">Navigation</li><li data-model="cart"><a class="pjax" href="http://localhost:3000/admin/cart">Carts</a></li><li data-model="contact"><a class="pjax" href="http://localhost:3000/admin/contact">Contacts</a></li><li data-model="line_item"><a class="pjax" href="http://localhost:3000/admin/line_item">Line items</a></li><li data-model="order"><a class="pjax" href="http://localhost:3000/admin/order">Orders</a></li><li data-model="product"><a class="pjax" href="http://localhost:3000/admin/product">Products</a></li><li data-model="user" class="active"><a class="pjax" href="./user_files/user.html">Users</a></li></ul>
+<ul class="nav nav-pills nav-stacked"></ul>
+
+</div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+<div class="content" data-pjax-container=""><script>
+  $('.nav.nav-pills li.active').removeClass('active');
+  $('.nav.nav-pills li[data-model="user"]').addClass('active');
+</script><div class="page-header">
+<h1>List of Users</h1>
+</div><ol class="breadcrumb"><li class="false"><a class="pjax" href="http://localhost:3000/admin/">Dashboard</a></li><li class="active">Users</li></ol><ul class="nav nav-tabs">
+
+          <li title="" rel="" class="icon index_collection_link active">
+            <a class="pjax" href="./user_files/user.html">
+              <i class="icon-th-list"></i>
+              <span>List</span>
+            </a>
+          </li>
+        
+          <li title="" rel="" class="icon new_collection_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/new">
+              <i class="icon-plus"></i>
+              <span>Add new</span>
+            </a>
+          </li>
+        
+          <li title="" rel="" class="icon export_collection_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/export">
+              <i class="icon-share"></i>
+              <span>Export</span>
+            </a>
+          </li>
+        
+<li class="dropdown" style="float:right"><a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost:3000/admin/user#">Selected items <b class="caret"></b></a><ul class="dropdown-menu" style="left:auto; right:0;"><li><a onclick="jQuery(&#39;#bulk_action&#39;).val(&#39;export&#39;); jQuery(&#39;#bulk_form&#39;).submit(); return false;" href="http://localhost:3000/admin/user#">Export selected Users</a></li><li><a onclick="jQuery(&#39;#bulk_action&#39;).val(&#39;bulk_delete&#39;); jQuery(&#39;#bulk_form&#39;).submit(); return false;" href="http://localhost:3000/admin/user#">Delete selected Users</a></li></ul></li>
+<li class="dropdown" style="float:right">
+<a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost:3000/admin/user#">
+Add filter
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu" id="filters" style="left:auto; right:0;">
+<li>
+<a data-field-label="Id" data-field-name="id" data-field-options="" data-field-type="integer" data-field-value="" href="http://localhost:3000/admin/user#">Id</a>
+</li>
+<li>
+<a data-field-label="Name" data-field-name="name" data-field-options="" data-field-type="string" data-field-value="" href="http://localhost:3000/admin/user#">Name</a>
+</li>
+<li>
+<a data-field-label="Email" data-field-name="email" data-field-options="" data-field-type="string" data-field-value="" href="http://localhost:3000/admin/user#">Email</a>
+</li>
+<li>
+<a data-field-label="Password digest" data-field-name="password_digest" data-field-options="" data-field-type="string" data-field-value="" href="http://localhost:3000/admin/user#">Password digest</a>
+</li>
+<li>
+<a data-field-datetimepicker-format="MMMM DD, YYYY HH:mm" data-field-label="Created at" data-field-name="created_at" data-field-options="" data-field-type="datetime" data-field-value="" href="http://localhost:3000/admin/user#">Created at</a>
+</li>
+<li>
+<a data-field-datetimepicker-format="MMMM DD, YYYY HH:mm" data-field-label="Updated at" data-field-name="updated_at" data-field-options="" data-field-type="datetime" data-field-value="" href="http://localhost:3000/admin/user#">Updated at</a>
+</li>
+</ul>
+</li>
+
+</ul><script>
+  jQuery(function($) {
+  
+  });
+</script><style>
+</style><div id="list">
+<form class="pjax-form form-inline" action="http://localhost:3000/admin/user?model_name=user" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+<div class="well">
+<span id="filters_box"></span>
+<hr class="filters_box" style="display:none">
+<div class="input-group">
+<input class="form-control input-small" name="query" placeholder="Filter" type="search">
+<span class="input-group-btn">
+<button class="btn btn-primary" data-disable-with="&lt;i class=&#39;icon-white icon-refresh&#39;&gt;&lt;/i&gt; Refresh" type="submit">
+<i class="icon-white icon-refresh"></i>
+Refresh
+</button>
+<button class="btn btn-info" id="remove_filter" title="Reset filters">
+<i class="icon-white icon-remove"></i>
+</button>
+</span>
+</div>
+<span style="float:right"><a class="btn btn-info" href="http://localhost:3000/admin/user/export?model_name=user">Export found Users</a></span>
+</div>
+</form>
+
+<form id="bulk_form" class="form" action="http://localhost:3000/admin/user/bulk_action" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="3wX2wlZrNDiy0GkfJ6PykwWHzaKl4MvnTHGlniBQYwJLUI2GSG2lMy+lgyUnXOsx+MJjbspIixbkBVpFWelsLQ==">
+<input type="hidden" name="bulk_action" id="bulk_action">
+<table class="table table-condensed table-striped">
+<thead>
+<tr>
+<th class="shrink">
+<input class="toggle" type="checkbox">
+</th>
+<th class="header pjax  id_field integer_type" data-href="/admin/user?model_name=user&amp;sort=id" rel="tooltip" title="">Id</th>
+<th class="header pjax  name_field string_type" data-href="/admin/user?model_name=user&amp;sort=name" rel="tooltip" title="" data-original-title="">Name</th>
+<th class="header pjax  email_field string_type" data-href="/admin/user?model_name=user&amp;sort=email" rel="tooltip" title="" data-original-title="">Email</th>
+<th class="header pjax  password_digest_field string_type" data-href="/admin/user?model_name=user&amp;sort=password_digest" rel="tooltip" title="">Password digest</th>
+<th class="header pjax  created_at_field datetime_type" data-href="/admin/user?model_name=user&amp;sort=created_at" rel="tooltip" title="">Created at</th>
+<th class="header pjax  updated_at_field datetime_type" data-href="/admin/user?model_name=user&amp;sort=updated_at" rel="tooltip" title="">Updated at</th>
+<th class="last shrink"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="user_row">
+<td>
+<input type="checkbox" name="bulk_ids[]" id="bulk_ids_" value="3">
+</td>
+<td class="id_field integer_type" title="3">3</td>
+<td class="name_field string_type" title="admin">admin</td>
+<td class="email_field string_type" title="admin@gmail.com">admin@gmail.com</td>
+<td class="password_digest_field string_type" title="$2a$10$CQs0Hsn9IEKmID95nOqR/eoDaA1KyA5ojifUcpA3QVBOOZGZlXTR.">$2a$10$CQs0Hsn9IEKmID95nOqR/eoDaA1KyA5ojifUcpA3QVBOOZGZlXTR.</td>
+<td class="created_at_field datetime_type" title="December 24, 2015 22:40">December 24, 2015 22:40</td>
+<td class="updated_at_field datetime_type" title="December 24, 2015 22:40">December 24, 2015 22:40</td>
+<td class="last links">
+<ul class="inline list-inline">
+          <li title="Show" rel="tooltip" class="icon show_member_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/3">
+              <i class="icon-info-sign"></i>
+              <span style="display:none">Show</span>
+            </a>
+          </li>
+        
+          <li title="Edit" rel="tooltip" class="icon edit_member_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/3/edit">
+              <i class="icon-pencil"></i>
+              <span style="display:none">Edit</span>
+            </a>
+          </li>
+        
+          <li title="Delete" rel="tooltip" class="icon delete_member_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/3/delete">
+              <i class="icon-remove"></i>
+              <span style="display:none">Delete</span>
+            </a>
+          </li>
+        </ul>
+</td>
+</tr>
+<tr class="user_row">
+<td>
+<input type="checkbox" name="bulk_ids[]" id="bulk_ids_" value="2">
+</td>
+<td class="id_field integer_type" title="2">2</td>
+<td class="name_field string_type" title="admin">admin</td>
+<td class="email_field string_type" title="admin@gmail.com">admin@gmail.com</td>
+<td class="password_digest_field string_type" title="$2a$10$3RHiD9YrtsDOIujNq7aHUu.WFxB09q5tt1985KvZqGvU20mYjIvQy">$2a$10$3RHiD9YrtsDOIujNq7aHUu.WFxB09q5tt1985KvZqGvU20mYjIvQy</td>
+<td class="created_at_field datetime_type" title="December 22, 2015 09:14">December 22, 2015 09:14</td>
+<td class="updated_at_field datetime_type" title="December 22, 2015 09:14">December 22, 2015 09:14</td>
+<td class="last links">
+<ul class="inline list-inline">
+          <li title="Show" rel="tooltip" class="icon show_member_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/2">
+              <i class="icon-info-sign"></i>
+              <span style="display:none">Show</span>
+            </a>
+          </li>
+        
+          <li title="Edit" rel="tooltip" class="icon edit_member_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/2/edit">
+              <i class="icon-pencil"></i>
+              <span style="display:none">Edit</span>
+            </a>
+          </li>
+        
+          <li title="Delete" rel="tooltip" class="icon delete_member_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/2/delete">
+              <i class="icon-remove"></i>
+              <span style="display:none">Delete</span>
+            </a>
+          </li>
+        </ul>
+</td>
+</tr>
+<tr class="user_row">
+<td>
+<input type="checkbox" name="bulk_ids[]" id="bulk_ids_" value="1">
+</td>
+<td class="id_field integer_type" title="1">1</td>
+<td class="name_field string_type" title="mensuri">mensuri</td>
+<td class="email_field string_type" title="men@hotmail.com">men@hotmail.com</td>
+<td class="password_digest_field string_type" title="$2a$10$ZpPorqR1oc4TUAqL7dc77uhhlaKLebl8SDgbyfQeV.NWFwYccZAju">$2a$10$ZpPorqR1oc4TUAqL7dc77uhhlaKLebl8SDgbyfQeV.NWFwYccZAju</td>
+<td class="created_at_field datetime_type" title="December 19, 2015 20:23">December 19, 2015 20:23</td>
+<td class="updated_at_field datetime_type" title="December 19, 2015 20:23">December 19, 2015 20:23</td>
+<td class="last links">
+<ul class="inline list-inline">
+          <li title="Show" rel="tooltip" class="icon show_member_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/1">
+              <i class="icon-info-sign"></i>
+              <span style="display:none">Show</span>
+            </a>
+          </li>
+        
+          <li title="Edit" rel="tooltip" class="icon edit_member_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/1/edit">
+              <i class="icon-pencil"></i>
+              <span style="display:none">Edit</span>
+            </a>
+          </li>
+        
+          <li title="Delete" rel="tooltip" class="icon delete_member_link ">
+            <a class="pjax" href="http://localhost:3000/admin/user/1/delete">
+              <i class="icon-remove"></i>
+              <span style="display:none">Delete</span>
+            </a>
+          </li>
+        </ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="row">
+<div class="col-md-6"></div>
+</div>
+<div class="row">
+<div class="col-md-6"></div>
+</div>
+<div class="clearfix total-count">3 users</div>
+</form>
+
+</div></div>
+</div>
+</div>
+</div>
+
+
+</body></html>

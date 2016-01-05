@@ -25,7 +25,7 @@
 				<ul>
 					<li><a href="#">Checkout</a></li> |
 					<% if current_user %>
-						<li><%= link_to "Account", user_show_path %></li> |
+						<li><%= link_to "Account", user_show_path(name: current_user.name) %></li> |
 						<li><%= link_to "Logout", logout_path %></li> |
 				    <% else %>
 					    <li><%= link_to 'Log in', login_path %></li> |

@@ -24,6 +24,8 @@ gem 'rails_admin'
 
 gem 'rename'
 
+gem 'email_validator'
+
 gem 'bootstrap_form'
 
 gem 'coffee-script-source', '1.8.0'
