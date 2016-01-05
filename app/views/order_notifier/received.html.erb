@@ -1,0 +1,18 @@
+				<h3>Book a Book order received</h3>
+	<p>
+		This is just to let you know that we've received your recent order:
+	</p>
+	<table>
+		<tr> <th colspan="2">Books</th> <th>Price</th> </tr>
+		<% total_price = 0 %> 
+		<% @order.line_items.each do |line_item|%>
+			<tr>	
+				<td> <%= line_item.quantity %> &times; </td>
+				<td> <%= line_item.product.title %> </td>
+				<td> <%= number_to_currency(line_item.total_price) %> </td>
+				<% total_price += line_item.total_price %>
+			</tr>
+		<% end %>
+	</table> 
+	
+		<h3> Total Price <%= number_to_currency(total_price) %> </h3>

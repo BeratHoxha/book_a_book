@@ -29,6 +29,7 @@ class OrdersController < ApplicationController
       if @order.save
         format.html { redirect_to store_url, notice: 'Thank you for your order.' }
         format.json { render :show, status: :created, location: @order }
+         OrderNotifier.received(@order).deliver
       else
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }
