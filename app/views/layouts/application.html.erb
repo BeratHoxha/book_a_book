@@ -3,6 +3,10 @@
 <html>
 <head>
   <title>Book a book</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+ 	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href= <%= image_url 'logo.png' %> >
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -40,11 +44,11 @@
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-					<%=link_to image_tag("logo.png"), store_path %>
+					<%=link_to image_tag("logo.png"), products_path %>
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
-				<li class="active grid"><%=link_to "Home", store_path %></li>
+				<li class="active grid"><%=link_to "Home", products_path %></li>
 				<li><a class="color4" href="#">Category</a></li>				
 				<li><a class="color6" href="#">Other</a></li>
 			</ul>

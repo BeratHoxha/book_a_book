@@ -16,13 +16,10 @@
                         <td>   </td>
                         <td style = "font-size: 25px; float: left; padding-right: 170px;"><h1>Total:</h1></td>
                         <td style = "float: left; font-size: 25px"><h5><strong><%= number_to_currency(@cart.total_price) %></strong></h5></td>
-                    <tr> <td></td><td></td><td></td> </tr>
-                    <tr> <td></td><td></td><td></td> </tr>
-                    <tr> <td></td><td></td><td></td> </tr>
-                    
-                    <tr>
+                    <!-- <tr> <td></td><td></td><td></td> </tr>                     -->
+                    <tr style = " border-top:2px solid rgb(97, 87, 87)">
                         <td>
-	  					<%= button_to "Continue Shopping", store_path, method: :get, class: 'btn btn-primary'%>
+	  					<%= button_to "Continue Shopping", products_path, method: :get, class: 'btn btn-primary'%>
                         </td>
                         <td>
 	  				    <%= button_to "Checkout", new_order_path, method: :get, id: 'checkout', class: 'btn btn-success'%>

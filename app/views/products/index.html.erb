@@ -1,3 +1,4 @@
+
 <div class="banner-slider">
   <div class="callbacks_container">
     <ul class="rslides" id="header-img">
@@ -23,16 +24,16 @@
                  <a href="single.html">
                   <div class="inner_content clearfix">
                     <div class="product_image">
-                      <%= link_to image_tag(product.image_url, class: 'img-responsive card-img-top'), store_show_path(id: product.id) %>
+                      <%= link_to image_tag(product.image_url, class: 'img-responsive card-img-top'), product_path(id: product.id) %>
                      </div>
                     <div class="price">
                        <div class="cart-left">
-                        <p class="title"><%= link_to product.title, store_show_path(id: product.id) %></p>
+                        <p class="title" style = "width: 200px"><%= link_to product.title, product_path(id: product.id) %></p>
                         <div class="price1">
                           <span class="actual"><%= number_to_currency(product.price) %></span>
                         </div>
                       </div>
-                      <div class="cart-right"> </div>
+                      <div class="cart-right" style = "margin-top: 30px"> </div>
                       <div class="clear"></div>
                     </div>       
                   </div>

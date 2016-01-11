@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to store_path, notice: 'Message was successfully sended.' }
+        format.html { redirect_to products_path, notice: 'Message was successfully sended.' }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }

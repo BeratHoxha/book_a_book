@@ -57,7 +57,7 @@ class CartsController < ApplicationController
   def destroy
     @cart.destroy if @cart.id == current_user.cart_id
     respond_to do |format|
-      format.html { redirect_to store_url, notice: 'Your cart is currently empty' }
+      format.html { redirect_to products_url, notice: 'Your cart is currently empty' }
       format.json { head :no_content }
     end
   end
@@ -73,6 +73,6 @@ class CartsController < ApplicationController
 
     def invalid_cart
       logger.error "Attempt to acess invalid cart #{params[:id]}"
-      redirect_to store_url, notice: 'Invalid cart'
+      redirect_to products_url, notice: 'Invalid cart'
     end
 end

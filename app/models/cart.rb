@@ -3,7 +3,9 @@ class Cart < ActiveRecord::Base
 	has_one :user
 
 	def add_product(product_id)
-		current_item = line_items.find_by(product_id: product_id)
+		# current_item = line_items.find_by(product_id: product_id)
+		current_item = nil
+        line_items.each { |item| current_item = item if item.product_id == product_id } 
 		if current_item
 			current_item.quantity += 1
 		else
@@ -14,5 +16,5 @@ class Cart < ActiveRecord::Base
 
 	def total_price
   		line_items.to_a.sum { |item| item.total_price}
- 	 end
+ 	end
 end

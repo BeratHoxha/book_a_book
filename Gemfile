@@ -28,6 +28,8 @@ gem 'email_validator'
 
 gem 'bootstrap_form'
 
+gem "figaro"
+
 gem 'coffee-script-source', '1.8.0'
 
 gem 'mail_form', '~> 1.5.0.rc'
@@ -55,6 +57,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
+  gem 'better_errors'
+  gem 'meta_request'
 end
 
 group :development do

@@ -89,7 +89,8 @@ p.title a:hover{
 	text-align: center;
 }
 .price1{
-	margin-top:10px;
+	bottom: 4px;
+	position:absolute;
 	color:#555;
 }
 
@@ -105,4 +106,61 @@ p.title a:hover{
     margin-left: 400px;
     font-family: cursive;
     color: rgba(131, 3, 3, 0.88)
+}
+.thumbnail {
+    padding:0px;
+}
+.panel {
+	position:relative;
+}
+.panel>.panel-heading:after,.panel>.panel-heading:before{
+	position:absolute;
+	top:11px;left:-16px;
+	right:100%;
+	width:0;
+	height:0;
+	display:block;
+	content:" ";
+	border-color:transparent;
+	border-style:solid solid outset;
+	pointer-events:none;
+}
+.panel>.panel-heading:after{
+	border-width:7px;
+	border-right-color:#f7f7f7;
+	margin-top:1px;
+	margin-left:2px;
+}
+.panel>.panel-heading:before{
+	border-right-color:#ddd;
+	border-width:8px;
+}
+.comment{ 
+    width: 100%;
+    float:left;
+}
+.comment-h1{
+	font-size: 30px;
+    float: left;
+    font-style: italic;
+    margin-left: -170px;
+    color :rgba(143, 131, 131, 0.78)
+}
+.comment-wrapper{
+	margin-left: 100px;
+	margin-top: 40px;
+}
+.comment:first-of-type { 
+   margin-top: 30px
+   }
+
+.form_comment{
+ 	float: left;
+    width: 750px;
+    margin-left: 100px;
+    margin-top: 50px
+}
+#submit {
+	margin-top: 10px;
+    margin-bottom: 10px;
 }

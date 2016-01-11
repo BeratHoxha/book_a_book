@@ -1,5 +1,5 @@
-class StoreController < ApplicationController
-  # before_filter :authorize, only: ['show']
+class ProductsController < ApplicationController
+
  def index
     products_technology = Product.search_by_category('Technology').all.shuffle[0..3]
     products_business = Product.search_by_category('Business').all.shuffle[0..3]
@@ -19,5 +19,6 @@ class StoreController < ApplicationController
 
  def show 
       @product = Product.find(params[:id])
+      @comment = Comment.new
  end
 end
