@@ -2,9 +2,9 @@
 <div class = "container-fluid">
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-heading"  style="color:#0275d8; font-family: Impact, sans-serif; font-size:23px;">
-            <h1>Contact Us</h1>
+            <h1> <%= t('.contactus') %> </h1>
             <hr style="max-width: 200px;margin: 15px auto;border-width: 4px;border-color: #000;">
-            <span class="subheading">Have questions?  We have answers.</span>
+            <span class="subheading"><%= t('.havequestions')%></span>
         </div>
     </div>
 </div>
@@ -27,11 +27,11 @@
         </div>
 
         <address id="adresa">
-               <h1>Address</h1><br>
-               Dodona, Prishtine, Kosove<br>
-               <strong>Mobile Phone:</strong>049-111-000<br>     
-               <strong>Fax:</strong>038-111-000  <br>   
-               <strong>Email:</strong> <a href="https://gmail.com/" style="color:blue">bookabook@gmail.com</a>
+               <h1> <%= t('.address') %> </h1><br>
+               <%= t('.dpk') %> <br>
+               <strong><%= t('.phn') %></strong>049-111-000<br>     
+               <strong><%= t('.fax') %></strong>038-111-000  <br>   
+               <strong><%= t('.email') %></strong> <a href="https://gmail.com/" style="color:blue">bookabook@gmail.com</a>
         </address>
 
     
@@ -39,16 +39,16 @@
 
         <div id="form">
            <%= form_for(@contact) do |f| %>
-             <%= f.label :name %>
+            <label> <%= t('.name')%> </label>
                 <%= f.text_field :name, class: 'form-control'%>
                       <br>   
-             <%= f.label :email %> 
+              <label> <%= t('.email')%> </label>
                 <%= f.text_field :name, class: 'form-control'%>
                       <br>
-             <%= f.label :Message %> 
+              <label> <%= t('.message')%> </label> 
              <%= f.text_area :message, class: 'form-control' %>
              <br>
-             <button type="submit" class="btn btn-primary">Send Message</button>
+             <button type="submit" class="btn btn-primary"> <%= t('.smessage') %> </button>
            <% end %>
         </div>
 

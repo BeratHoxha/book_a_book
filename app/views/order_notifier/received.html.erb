@@ -1,9 +1,9 @@
-				<h3>Book a Book order received</h3>
+				<h3> <%= t('.babor') %> </h3>
 				<p>
-					This is just to let you know that we've received your recent order:
+					<%= t('.this') %>
 				</p>
 				<table>
-					<tr> <th colspan="2">Books</th> <th>Price</th> </tr>
+					<tr> <th colspan="2"><%= t('.books') %></th> <th><%= t('.price')%></th> </tr>
 					<% total_price = 0 %> 
 					<% @order.line_items.each do |line_item|%>
 					<tr>	
@@ -15,4 +15,4 @@
 					<% end %>
 				</table> 
 				
-				<h3> Total Price <%= number_to_currency(total_price) %> </h3>
+				<h3> <%= t('.tp') %> <%= number_to_currency(total_price) %> </h3>

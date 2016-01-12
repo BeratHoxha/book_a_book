@@ -7,6 +7,6 @@ class OrderNotifier < ApplicationMailer
   #
   def received(order)
     @order = order
-    mail to: order.email, subject: "'BOOK A BOOK' Store Order Received Confirmation"
+    mail to: order.email
   end
 end

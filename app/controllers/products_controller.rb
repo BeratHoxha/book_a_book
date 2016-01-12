@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
  def index
+
     products_technology = Product.search_by_category('Technology').all.shuffle[0..3]
     products_business = Product.search_by_category('Business').all.shuffle[0..3]
     products_history = Product.search_by_category('History').all.shuffle[0..3]
@@ -15,6 +16,14 @@ class ProductsController < ApplicationController
             @error = "\"#{params[:search].capitalize}\" not found"
         end
      end
+ end
+
+ def create
+   if params[:set_locale]
+      redirect_to products_url(locale: params[:set_locale])
+   else
+      @products = Product.order(:title)
+   end
  end
 
  def show 

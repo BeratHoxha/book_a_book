@@ -1,0 +1,76 @@
+<div class="row">
+     <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+         <div class="row">
+             <div class="col-xs-6 col-sm-6 col-md-6">
+                 <address>
+                     <strong>  <%= t('.name') %> <%= @order.name.capitalize%></strong>
+                     <br>
+                      <%= t('.address') %> <%=@order.address%>
+                     <br>
+                     <%= t('.email') %> <%= @order.email%>
+                     <br>
+                     <abbr title="Phone"></abbr> <%= t('.tele') %> (213) 484-6829
+                 </address>
+             </div>
+             <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                 <p>
+                     <em><%= t('.date') %> <%= Time.now.strftime("%m/%d/%Y")  %></em>
+                 </p>
+                 <p>
+                     <em><%= t('.receipt') %> #: 34522677W</em>
+                 </p>
+             </div>
+         </div><br><br><br>
+         <div class="row">
+             <div class="text-center">
+                 <h1 style="margin-left:160px;"><%= t('.receipt1') %></h1>
+             </div><br><br><br>
+             </span>
+             <table class="table table-hover">
+                <thead>
+                     <tr>
+                         <th><%= t('.product')%></th>
+                         <th><%= t('.quantity')%></th>
+                         <th class="text-center"><%= t('.price')%></th>
+                         <th class="text-center"><%= t('.total')%></th>
+                    </tr>
+                </thead>
+               <tbody>
+                		<% final_price = 0 %>
+                 		<% @order.line_items.each do |line_item| %>
+ 
+                    <tr>
+                         <td class="col-md-9"><em><%= line_item.product.title %></em></h4></td>
+                         <td class="col-md-1" style="text-align: center"> <%= line_item.quantity %> </td>
+                         <td class="col-md-1 text-center"> <%= number_to_currency(line_item.product.price) %></td>
+                         <td class="col-md-1 text-center"><%= number_to_currency(line_item.total_price) %></td>
+                         <% final_price += line_item.total_price %>
+                     </tr>
+                     <% end %>
+                     <tr>
+                         <td>   </td>
+                         <td>   </td>
+                         <td class="text-right">
+                         
+                        <p>
+                             <strong> <%= t'.tax' %> </strong>
+                         </p></td>
+                         <td class="text-center">
+                         <p>
+                             <strong><%= 16 %> % </strong>
+                         </p></td>
+                     </tr>
+                     <tr>
+                         <td>   </td>
+                         <td>   </td>
+                         <td class="text-right"><h4><strong> <%= t('.final_price')%> </strong></h4></td>
+                           <% final_price += (final_price * 16/100)%>
+                         <td class="text-center text-danger"><h4><strong> <%= number_to_currency(final_price) %> </strong></h4></td>
+                     </tr>
+                 </tbody>
+             </table><br><br>
+             <button type="button" class="btn btn-success btn-lg btn-block">
+                 <%= t('.continue_shopping') %>  <span class="glyphicon "></span>
+             </button></td>
+         </div>
+    </div> 

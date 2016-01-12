@@ -4,28 +4,28 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th style = "padding-right: 400px">Product</th>
-                        <th style = "float:left; padding-right: 40px;">Quantity</th>
-                        <th style = "padding-left: 50px; padding-right: 80px; float: left;">Price</th>
-                        <th style = "float: left">Total</th>
+                        <th style = "padding-right: 400px"><%= t('.product') %></th>
+                        <th style = "float:left; padding-right: 40px;"><%= t('.quantity') %></th>
+                        <th style = "padding-left: 50px; padding-right: 80px; float: left;"> <%= t('.price') %></th>
+                        <th style = "float: left"><%= t('.total') %></th>
                         <th> </th>
                     </tr>
                 </thead>
                 <tbody>
 			            <%= render(@cart.line_items) %>
                         <td>   </td>
-                        <td style = "font-size: 25px; float: left; padding-right: 170px;"><h1>Total:</h1></td>
+                        <td style = "font-size: 25px; float: left; padding-right: 170px;"><h1><%= t('.total2') %></h1></td>
                         <td style = "float: left; font-size: 25px"><h5><strong><%= number_to_currency(@cart.total_price) %></strong></h5></td>
                     <!-- <tr> <td></td><td></td><td></td> </tr>                     -->
                     <tr style = " border-top:2px solid rgb(97, 87, 87)">
                         <td>
-	  					<%= button_to "Continue Shopping", products_path, method: :get, class: 'btn btn-primary'%>
+	  					<%= button_to  t('.continue_shopping') , products_path, method: :get, class: 'btn btn-primary'%>
                         </td>
                         <td>
-	  				    <%= button_to "Checkout", new_order_path, method: :get, id: 'checkout', class: 'btn btn-success'%>
+	  				    <%= button_to  t('.checkout') , new_order_path, method: :get, id: 'checkout', class: 'btn btn-success'%>
                        </td>
                        <td> 
-                            <%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger"%>
+                            <%= button_to  t('.empty_cart') , @cart, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger"%>
                        </td>
                     </tr>
                 </tbody>

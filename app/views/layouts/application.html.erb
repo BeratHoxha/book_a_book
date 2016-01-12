@@ -3,8 +3,8 @@
 <html>
 <head>
   <title>Book a book</title>
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
- 	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="icon" type="image/png" href= <%= image_url 'logo.png' %> >
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -15,55 +15,55 @@
 	<div class="header-top">
 	   <div class="wrap"> 
 			  <div class="header-top-left">
-			  	   <div class="box">
-   				      <select tabindex="4" class="dropdown">
-							<option value="" class="label" value="">Language :</option>
-							<option value="1">English</option>
-							<option value="2">French</option>
-							<option value="3">German</option>
-					  </select>
-   				    </div>
-   				    <div class="clear"></div>
-   			 </div>
+				   
+				   <div class="box">
+						  <%= form_tag products_path class: 'box' do %>
+						  	<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), 
+						  	onchange: 'this.form.submit()' %>
+						  <% end %>
+					</div>
+					
+					<div class="clear"></div>
+			 </div>
 			 <div class="cssmenu">
 				<ul>
-					<li><a href="#">Checkout</a></li> |
+					<li><a href="#"> <%= t('.checkout') %> </a></li> |
 					<% if current_user %>
-						<li><%= link_to "Account", user_show_path(name: current_user.name) %></li> |
-						<li><%= link_to "Logout", logout_path %></li> |
-				    <% else %>
-					    <li><%= link_to 'Log in', login_path %></li> |
-					    <li><%= link_to 'Sign up', user_new_path %></li> |
+						<li><%= link_to t('.account'), user_show_path(name: current_user.name) %></li> |
+						<li><%= link_to t('.log_out'), logout_path %></li> |
+					<% else %>
+						<li><%= link_to t('.log_in'), login_path %></li> |
+						<li><%= link_to t('.sign_up'), user_new_path %></li> |
 					<% end %>
 				</ul>
 			</div>
 			<div class="clear"></div>
- 		</div>
+		</div>
 	</div>
 	<div class="header-bottom">
-	    <div class="wrap">
+		<div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
 					<%=link_to image_tag("logo.png"), products_path %>
 				</div>
 				<div class="menu">
-	            <ul class="megamenu skyblue">
-				<li class="active grid"><%=link_to "Home", products_path %></li>
-				<li><a class="color4" href="#">Category</a></li>				
-				<li><a class="color6" href="#">Other</a></li>
+				<ul class="megamenu skyblue">
+				<li class="active grid"><%=link_to t('.home'), products_path %></li>
+				<li><a class="color4" href="#"> <%= t('.category') %> </a></li>				
+				<li><a class="color6" href="#"> <%= t('.other') %> </a></li>
 			</ul>
 			</div>
 		</div>
 	   <div class="header-bottom-right">
-         <div class="search">	  
+		 <div class="search">	  
 			<form action="" >
-				<input type="text" name="search" class="textbox" class="form-control" value="Search" name="search" id="search" onfocus="this.value = '';" >
-			    <%= submit_tag "Search" %>
+				<input type="text" name="search" class="textbox" class="form-control" value= <%= t(".search") %> name="search" id="search" onfocus="this.value = '';" >
+				<%= submit_tag "Search" %>
 				<div id="response"> </div>
 			</form>
 		 </div>
 	  <div class="tag-list">
-	    <ul class="icon1 sub-icon1 profile_img">
+		<ul class="icon1 sub-icon1 profile_img">
 			<li><a class="active-icon c1" href="#"> </a>
 			</li>
 			<li>
@@ -73,23 +73,23 @@
 			</li> 
 		</ul>
 	  </div>
-    </div>
-     <div class="clear"></div>
-     </div>
+	</div>
+	 <div class="clear"></div>
+	 </div>
 	</div>
 
 	<%= yield %>
 </body>
-    <div class="footer-bottom">
-	     <div class="wrap">
-	         <div class="copy">
-			       <p>&copy <%=Time.now.year  %>  BOOK A BOOK | All Rights Reserved. </p>
-		     </div>
+	<div class="footer-bottom">
+		 <div class="wrap">
+			 <div class="copy">
+				   <p>&copy <%=Time.now.year  %>  BOOK A BOOK | All Rights Reserved. </p>
+			 </div>
 			  <div class="f-list2">
 				 <ul>
-					<li><%= link_to "About us", application_about_us_path %></li>
-					<li><%= link_to "Contact", new_contact_path %></li>
-					<li><%= link_to "Privacy Policy", application_privacy_path %></li>
+					<li><%= link_to t('.about_us'), application_about_us_path %></li>
+					<li><%= link_to t('.contact'), new_contact_path %></li>
+					<li><%= link_to t('.privacy'), application_privacy_path %></li>
 				 </ul>
 			  </div>
 			  <div class="clear"></div>

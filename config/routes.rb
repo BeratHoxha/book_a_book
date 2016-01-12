@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :orders
 
   get 'contacts/new'
 
@@ -23,20 +22,21 @@ Rails.application.routes.draw do
   
   get '/logout' => 'sessions#destroy'
 
-  resources :line_items
-
-  resources :carts
-
-  resources :products do
-    resources :comments 
-  end
-
-  resources :contacts
+  get 'bills/index', as: :bills    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'products#index'
+  scope '(:locale)' do 
+    resources :products do  
+    resources :comments 
+      end
+    resources :orders
+    resources :contacts
+    resources :line_items
+    resources :carts
+    root 'products#index', as: 'Products', via: :all
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

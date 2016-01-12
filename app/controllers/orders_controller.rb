@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
     @order.add_line_items_from_cart(@cart)
     respond_to do |format|
       if @order.save
-        format.html { redirect_to products_url, notice: 'Thank you for your order.' }
+        format.html { redirect_to bills_url(id: @order.id), notice: 'Thank you for your order.' }
         format.json { render :show, status: :created, location: @order }
          OrderNotifier.received(@order).deliver
       else

@@ -18,7 +18,17 @@
               <h1 class = 'error'> <%= @error %> </h1>
            <% end %>
            <% @products.each do |category, products| %> 
-             <h2 class="head"><%= category %></h2>
+             
+             <% if category.eql?"Technology" %>
+                   <h2 class="head"><%= t '.tekno' %></h2>
+                <% elsif category.eql?"Business" %>
+                   <h2 class="head"><%= t '.business' %></h2>
+                <% elsif category.eql?"History" %>
+                   <h2 class="head"><%= t '.history' %></h2>
+                <% else  %>
+                   <h2 class="head"><%= t '.other' %></h2>
+              <% end %>
+
              <%products.each do |product| %>
                <div class="col_1_of_3 span_1_of_3"  style = "width: 230px; height: 350px;">
                  <a href="single.html">
@@ -30,7 +40,7 @@
                        <div class="cart-left">
                         <p class="title" style = "width: 200px"><%= link_to product.title, product_path(id: product.id) %></p>
                         <div class="price1">
-                          <span class="actual"><%= number_to_currency(product.price) %></span>
+                          <span class="actual"><%= number_to_currency(product.price, locale: :shq) %></span>
                         </div>
                       </div>
                       <div class="cart-right" style = "margin-top: 30px"> </div>

@@ -1,0 +1,159 @@
+shq:
+
+  bills:
+    index:
+      name:              "Emri: "
+      address:           "Adresa: "
+      email:             "Email: "
+      tele:              "Numri i telefonit: "
+      date:              "Data: "
+      receipt:           "Fatura"
+      receipt1:          "Fatura"
+      product:           "Produkti"
+      quantity:          "Sasia: "
+      price:             "Çmimi: "
+      total:             "Totali: "
+      subtotal:          "Subtotali: "
+      tax:               "Taksa: "
+      continue_shopping: "Vazhdo Shopingun"
+
+  application:
+    about_us:            
+             about:                "Per Ne"
+             para1:                " 'Book A Book' është një faqe që i jep mundësi për të blerë books.It është një faqe e mirë për lexuesit që duan të lexojnë dhe të mësojnë duke na vizituar dhe duke blerë faqen e dëshiruar books.Our ofron një mënyrë të lehtë për blerjen e librave . Klientët tanë mund të Kërko në faqen tonë duke përdorur search Box vendoset në krye të drejtë të page.Visitors e Librit Libër Web Site pas kërkimit për librin do të shohim librat më poshtë në lidhje me atë që ata Fjalët for.After që klientët mund të zgjedhin librat e dëshiruara të cilat do të shfaqet në faqen e blerjes ."
+             re:                   "Rishikime"
+             para2:                " Vizitorët mund të postoni komente , komente , fotografi, video dhe përmbajtje të tjera , të dërgoni e-karta dhe komunikimet e tjera , dhe të paraqesë sugjerimet , idetë, komente, pyetje , apo informacione të tjera , për aq kohë sa përmbajtja nuk është e paligjshme , të pahijëshme , kërcënuese , shpifëse , pushtuese e intimitetit , shkelje e të drejtave të pronësisë intelektuale ( duke përfshirë të drejtat publicitare ) , ose përndryshe të dëmshme për të palëve të treta ose të pakëndshëm , dhe nuk përbëhen nga , ose përmbajnë viruse software , fushatat politike , kërkesë komerciale , letra zinxhir , mailings masive , ose çdo formë e 'spam' apo mesazhe të pakërkuara komerciale elektronike . "
+             info:                 "Informacion"
+             para3:                "Në qoftë se ju përdorni ndonjë një shërbim e librit , ju jeni përgjegjës për ruajtjen e fshehtësisë së llogarisë dhe fjalëkalimin dhe për kufizimin e qasjes në kompjuterin tuaj , dhe jeni dakord për të pranuar përgjegjësinë për të gjitha aktivitetet që ndodhin në llogarinë tuaj, ose fjalëkalimin . Book Një libër i rezervon të drejtën të refuzojë shërbimin , të përfundojë llogaritë , fshijnë ose modifikojnë përmbajtjen , ose anulojë urdhrat sipas gjykimit të saj ."  
+    privacy:
+            pp:                  "Privacy Policy"
+            pp1:                 "Privacy juaj është i rëndësishëm për ne . Për të mirë të mbrojtur privatësinë tuaj ne ofrojnë këtë njoftim duke shpjeguar praktikave online informacionit dhe zgjedhjet ju mund të bëni në lidhje me mënyrën e informacionit tuaj është mbledhur dhe përdorur . Për të bërë këtë njoftim lehtë për të gjetur , kemi bërë atë në dispozicion në faqen tonë dhe në çdo pikë ku mund të kërkohet informacion personalisht të identifikueshme . Libri i një libër kurrë nuk do të me dashje të zbulojë çdo informacion personalisht të identifikueshme në lidhje me audiencën tonë online për të ndonjë pale të tretë pa e parë duke marrë lejen e përdoruesit . "
+            gi:                  "Gathering Information"
+            gi1:                 "Ne nuk mbledhim informacion personalisht të identifikueshme nga vizitorët tonë të tjera se çfarë është e furnizuar me ne në një basis.Some vullnetare nga faqet tona përmbajnë lidhje me faqet e tjera praktikat e informacionit e të cilëve mund të jenë të ndryshme se ours.Visitors duhet të konsultoheni me vendet e tjera njoftimeve të privatësisë ndërsa ne nuk kemi kontroll mbi informatat që i dorëzohet , ose të mbledhura nga , këto palë të treta . "
+            tc:                  "Terms and Conditions"
+            tc1:                 " Duke përdorur këtë faqe ju tregon miratimin tuaj për termat dhe kushtet e këtij libri një Book Web Site Rregulla Vetësie . Nëse ju nuk pajtoheni me këto terma dhe kushte , ju lutem mos e përdorni këtë faqe interneti . Ne rezervojmë të drejtën , në majat tonë gjykimit , për të ndryshuar , modifikuar , shtuar apo hequr pjesë të kësaj politike në çdo kohë . nga koha në kohë , libër një libër mund të rinovuar këtë Drejta e Autorit . Ne do t'ju njoftojmë për ndryshimet materiale në mënyrën se si ne trajtojmë informacion personalisht të identifikueshme , duke e vendosur një njoftim në faqen tonë . "
+
+  contacts:
+    new:
+     contactus:            "Na Kontaktoni"       
+     havequestions:        "Keni pytje? Ne kemi pergjigjet."
+     dpk:                  "Dodona, Prishtine, Kosove"
+     address:              "Adresa: "
+     phn:                  "Numri i Telefonit: "
+     fax:                  "Faks: "
+     email:                "Email: "
+     name:                 "Emri"
+     email1:               "Email"
+     message:              "Mesazhi"
+     smessage:             "Dergo Mesazhin"
+
+  order_notifier:
+    received:
+       subject:             "'BOOK A BOOK' Store KONFIRMIMI se porosia eshte pranuar"
+       babor:               "Porosia juaj eshte pranuar!"
+       this:                "Ky eshte vetem nje njoftim se ne kemi pranuar prosine tuaj!"
+       books:               "Librat"
+       price:               "Çmimi"
+       tp:                  "Çmimi Total"
+
+  number:
+    currency:
+       format:
+        unit:                '€'
+        precision:           2
+        seperator:           ','
+        delimeter:           '.'
+        format:              '%u%n'
+
+  users:
+    show:
+      name:                "Emri: "
+      email:               "Email: "
+      dob:                 "Datëlindja"
+      gender:              "Gjinia"
+      address:             "Adresa"
+      sign_up_date:        "Kur eshte krijuar llogaria"
+      pn:                  "Numri i telefonit"
+    new:
+      sign_up:             "Kyçu!"
+      free:                "Pa pare dhe gjithë pa pare!"
+      first_name:          "Emri dhe mbiemri"
+      email:               "Email"
+      create_username:     "Krijo emer te perdoruesit"
+      username:            "Emri i perdoruesit"
+      pass:                "Fjalkalimi"
+      pass2:               "Fjalkalimi Perseri"
+      register:            "Regjistrohu"
+      confirm_password:    "Konfirmo Fjalkalimin"
+      name:                "Emri"
+      email:               "Email"
+      password:            "Fjalkalimi"
+
+  orders:
+    form:
+      name:                "Emri"
+      checkout:            "Porositni"
+      email:               "Email" 
+      address:             "Adresa"    
+      pay_type:            "Menyra e pageses"     
+      first_and_last_name: "Emri dhe mbiemri"
+      email2:              "example@domain.com"
+      full_address:        "Adresa e plotë"
+      payment_method:      "Metoda e pagesës"
+      place_order:         "Dergo porosinë"
+      back:                "Kthehu" 
+
+  sessions:
+    new:
+      login:              "Kyçu"
+      username_or_email:  "Emri i perdoruesit ose emaili"
+      password:           "Fjalkalimi"
+      remember_me:        "Me mbaj ne mend"
+      LOGIN:              "KYÇU"
+
+  line_items:
+    line_item:
+      remove:           "Fshij"
+
+  carts:
+    cart:
+      product:           "Produkti"
+      quantity:          "Sasia"
+      price:             "Çmimi"
+      total:             "Totali"
+      total2:            "Totali:"
+      continue_shopping: "Vazhdo shopingun"
+      checkout:          "Blej"
+      empty_cart:        "Zbrase karten"
+  
+  products:
+    show:
+      add_to_cart:     "Shto ne Shporte"
+      back:            "Kthehu"
+      description:     "Pershkrimi"   
+      author:          "Autori"
+      category:        "Kategoria"
+      tekno:           "Teknologji"
+      biznes:          "Biznes"
+      history:         "Histori"
+    index:
+      tekno:           "TEKNOLOGJI"
+      business:        "BIZNES"
+      history:         "HISTORI"
+      other:           "TJERA"
+
+  layouts:
+    application:
+      search:          "Kërko"
+      languages:       "Gjuhet: "
+      checkout:        "Blej"
+      account:         "Profili"
+      log_out:         "Ç'kyqu"
+      log_in:          "Kyçu"
+      sign_up:         "Krijo Llogari"
+      home:            "Shtepia"
+      category:        "Kategoria"
+      about_us:        "Per Ne" 
+      other:           "Tjera"
+      contact:         "Kontakt"
+      privacy:         "Politikat e Privatësisë"

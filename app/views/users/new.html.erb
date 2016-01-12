@@ -1,30 +1,30 @@
 <div id = "body_new-user" class="container-fluid";>
  <header style = "margin-left: 540px;">
-  <h1> Sign Up </h1>
-<h1>It's free and always will be</h1>
+  <h1><%= t('.sign_up') %> </br>
+   <%= t('.free') %></h1>
 </header>       
 <div  class="form">
   <%= form_for(:user) do |f| %>
 
-    <p class="contact"><%= f.label :name %></p>
-    <%= f.text_field :name, id: 'name', placeholder: 'First and last name' %>
+    <p class="contact"><label> <%= t('.name') %> </label></p>
+    <%= f.text_field :name, id: 'name', placeholder: t('.first_name') %>
 
-    <p class="contact"><%= f.label :email %></p>
-    <%= f.text_field :email, id: 'email', placeholder: 'example@domain.com'%>
+    <p class="contact"><label> <%= t('.email') %> </label></p>
+    <%= f.text_field :email, id: 'email', placeholder: t('.email')%>
 
-    <p class="contact"><label for="username">Create a username</label></p> 
-    <input id="username" name="username" placeholder="username" required="" tabindex="2" type="text"> 
+    <p class="contact"><label for="username"><%= t('.create_username') %></label></p> 
+    <input id="username" name="username" placeholder= <%= t('.username') %> required="" tabindex="2" type="text"> 
 
-    <p class="contact"><%= f.label :password %></p>
-    <%= f.password_field(:password, type: "password", class: "form-control", placeholder: "Password") %>
+    <p class="contact"><label> <%= t('.password') %> </label></p>
+    <%= f.password_field(:password, type: "password", class: "form-control", placeholder: t('.pass')) %>
 
 
-    <p class="contact"><label for="repassword">Confirm your password</label></p> 
-    <%= f.password_field(:password, type: "password", class: "form-control", placeholder: "Password") %>
+    <p class="contact"><label for="repassword"> <%= t('.confirm_password')%> </label></p> 
+    <%= f.password_field(:password, type: "password", class: "form-control", placeholder: t('.pass2')) %>
 
     <br><br>
 
-    <%= f.submit 'Register', class: 'btn btn-primary' %>
+    <%= f.submit t('.register'), class: 'btn btn-primary' %>
 
   <% end %>
 

@@ -1,6 +1,6 @@
 <div id = "body_new-user" class="container-fluid";>
  <header >
-  <div align="center"><h1> Checkout </h1></div>
+  <div align="center"><h1> <%= t('.checkout')%> </h1></div>
 </header>       
 <div  class="form">
   <%= form_for(@order) do |f| %>
@@ -16,23 +16,23 @@
       </div>
     <% end %>
 
-    <p class="contact"><%= f.label :name %></p>
-    <%= f.text_field :name, id: 'name', placeholder: 'First and last name' %>
+    <p class="contact"><label> <%= t('.name') %> </label></p>
+    <%= f.text_field :name, id: 'name', placeholder: t('.first_and_last_name') %>
 
-    <p class="contact"><%= f.label :email %></p>
-    <%= f.email_field :email, id: 'email', placeholder: 'example@domain.com'%>
+    <p class="contact"><label> <%= t('.email') %> </label></p>
+    <%= f.email_field :email, id: 'email', placeholder: t('.email2')%>
 
-    <p class="contact"><%= f.label :address %></p> 
-    <%= f.text_area :address, rows: 3, cols: 52, placeholder: 'Full address'  %>
+    <p class="contact"><label> <%= t('.address') %> </label></p> 
+    <%= f.text_area :address, rows: 3, cols: 46, placeholder: t('.full_address')  %>
 
 
-    <p class="contact"><%= f.label :pay_type%></p>
-    <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Payment method' %>
+    <p class="contact"><label> <%= t('.pay_type') %> </label></p>
+    <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: t('.payment_method') %>
 
     <br><br>
     <div style="margin-top:30px; padding-bottom:30px;">
-      <%= f.submit 'Place Order', class: 'btn btn-primary' %>
-      <div style="margin: -52px 0 0 325px"><%= link_to 'Back', products_path, class: 'btn btn-success' %></div>
+      <%= f.submit t('.place_order'), class: 'btn btn-primary' %>
+      <div style="margin: -52px 0 0 325px"><%= link_to t('.back'), products_path, class: 'btn btn-success' %></div>
     </div>
   <% end %>
 
