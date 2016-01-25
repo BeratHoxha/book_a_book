@@ -1,0 +1,28 @@
+
+<section class="credit-card visa gr-visa">
+  <div class="logo">Visa</div>
+  <form>
+      <p style="font-size:30px; color:white">Payment Details</p>
+
+  <ul class="inputs">
+      <li>
+          <label>Card Number</label>
+          <input type="text" name="card_number" pattern="[0-9]{13,16}"  class="full gr-input" required />
+      </li>
+      <li class="expire last">
+          <label>Expiration</label>
+          <input type="text" style="margin-top: 17px;" name="expire_month"  size="10" class="month gr-input" required />
+          <input type="text" name="expire_year"  size="10" class="year gr-input" required />
+          <div class="clearfix"></div>
+      </li>
+      <li class="cvc-code last">
+          <label>CVC Code</label>
+          <input type="text" name="cvc_code"  size="10" class="gr-input" required />
+      </li>
+      <div class="clearfix"></div>
+  </ul>
+  </form>
+  <div class="watermark">Visa</div>
+</section>
+<%= link_to "Pay it now", bills_url(id: @order.id), notice: 'Thank you for your order.', class:"btn btn-block btn-lg btn-danger", style:"width:25%; margin:0 auto; margin-bottom:90px"%>
+

@@ -30,6 +30,21 @@ section,summary,time,mark,audio,video{
     font:inherit;
     vertical-align:baseline;
 }
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.body2 {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer, .push {
+height: 4em;
+}
 
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
     display: block;
@@ -72,9 +87,7 @@ nav.vertical ul li{ display:block;}
 nav.horizontal ul li{ display: inline-block;}
 img{max-width:100%;}
 
-body{
-  margin-bottom: 100px;
-}
+
 .wrap{
   width:80%;
   margin:0 auto;

@@ -69,8 +69,8 @@
                      </tr>
                  </tbody>
              </table><br><br>
-             <button type="button" class="btn btn-success btn-lg btn-block">
-                 <%= t('.continue_shopping') %>  <span class="glyphicon "></span>
+             <%= button_to  t('.continue_shopping'),  products_path, :method => :get, class: "btn btn-success btn-lg btn-block"%>
+                 <span class="glyphicon "></span>
              </button></td>
          </div>
     </div> 

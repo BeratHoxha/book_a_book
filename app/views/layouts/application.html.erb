@@ -12,13 +12,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class = "body2">
 	<div class="header-top">
 	   <div class="wrap"> 
 			  <div class="header-top-left">
 				   
 				   <div class="box">
 						  <%= form_tag products_path class: 'box' do %>
-						  	<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), 
+						  	  	<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), class: "dropdown", tabindex: "4", style: "background-color: #4CB1CA",
 						  	onchange: 'this.form.submit()' %>
 						  <% end %>
 					</div>
@@ -79,8 +80,8 @@
 	</div>
 
 	<%= yield %>
-</body>
-	<div class="footer-bottom">
+ </div>
+ <div class="footer-bottom">
 		 <div class="wrap">
 			 <div class="copy">
 				   <p>&copy <%=Time.now.year  %>  BOOK A BOOK | All Rights Reserved. </p>
@@ -95,4 +96,5 @@
 			  <div class="clear"></div>
 		 </div>
   </div>
+ </body>
 </html>

@@ -27,13 +27,17 @@ class OrdersController < ApplicationController
     @order.add_line_items_from_cart(@cart)
     respond_to do |format|
       if @order.save
-        format.html { redirect_to bills_url(id: @order.id), notice: 'Thank you for your order.' }
-        format.json { render :show, status: :created, location: @order }
+        if @order.pay_type == 'Credit card'
+          format.html { redirect_to credit_bill_path(id: @order.id) }
+        else 
+           format.html { redirect_to bills_url(id: @order.id), notice: 'Thank you for your order.' }
+           format.json { render :show, status: :created, location: @order }
+         end
          OrderNotifier.received(@order).deliver
       else
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
+          format.html { render :new }
+          format.json { render json: @order.errors, status: :unprocessable_entity }
+       end
     end
   end
 

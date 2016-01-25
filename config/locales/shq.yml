@@ -76,7 +76,7 @@ shq:
       pn:                  "Numri i telefonit"
     new:
       sign_up:             "Kyçu!"
-      free:                "Pa pare dhe gjithë pa pare!"
+      free:                "Eshte dhe gjithmone do te jete falas!"
       first_name:          "Emri dhe mbiemri"
       email:               "Email"
       create_username:     "Krijo emer te perdoruesit"
@@ -151,7 +151,7 @@ shq:
       log_out:         "Ç'kyqu"
       log_in:          "Kyçu"
       sign_up:         "Krijo Llogari"
-      home:            "Shtepia"
+      home:            "Ballina"
       category:        "Kategoria"
       about_us:        "Per Ne" 
       other:           "Tjera"
