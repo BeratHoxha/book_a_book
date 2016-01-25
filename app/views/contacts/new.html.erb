@@ -1,16 +1,15 @@
-<section class="jumbotron text-center" style="height:520px; background: url('/assets/contact.jpg')">
+<section class="jumbotron text-center" style="margin-top:6%;height:520px; background: url('/assets/contact.jpg')">
 <div class = "container-fluid">
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-heading"  style="color:#0275d8; font-family: Impact, sans-serif; font-size:23px;">
             <h1> <%= t('.contactus') %> </h1>
-            <hr style="max-width: 200px;margin: 15px auto;border-width: 4px;border-color: #000;">
-            <span class="subheading"><%= t('.havequestions')%></span>
+            <h3>Have questions? We have answers.</h3> 
         </div>
     </div>
 </div>
 </section>
 
-<div class="container-fluid">      
+<div class="container-fluid" style="height:1000px;">      
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
 
       <% if @contact.errors.any? %>
@@ -33,6 +32,8 @@
                <strong><%= t('.fax') %></strong>038-111-000  <br>   
                <strong><%= t('.email') %></strong> <a href="https://gmail.com/" style="color:blue">bookabook@gmail.com</a>
         </address>
+        <br>
+        <br>
 
     
  

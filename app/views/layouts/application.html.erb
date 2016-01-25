@@ -17,6 +17,7 @@
 	   <div class="wrap"> 
 			  <div class="header-top-left">
 				   
+				   <%= google_adsense_include_tag width: '400', height: '100' %>
 				   <div class="box">
 						  <%= form_tag products_path class: 'box' do %>
 						  	  	<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), class: "dropdown", tabindex: "4", style: "background-color: #4CB1CA",
@@ -41,6 +42,7 @@
 			<div class="clear"></div>
 		</div>
 	</div>
+
 	<div class="header-bottom">
 		<div class="wrap">
 			<div class="header-bottom-left">
@@ -74,13 +76,11 @@
 			</li> 
 		</ul>
 	  </div>
-	</div>
-	 <div class="clear"></div>
 	 </div>
 	</div>
-
+	</div>
 	<%= yield %>
- </div>
+</div>
  <div class="footer-bottom">
 		 <div class="wrap">
 			 <div class="copy">

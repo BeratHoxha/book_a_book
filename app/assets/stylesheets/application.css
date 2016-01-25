@@ -86,8 +86,9 @@ table{
 nav.vertical ul li{ display:block;}
 nav.horizontal ul li{ display: inline-block;}
 img{max-width:100%;}
-
-
+h1{
+  width:100%;
+}
 .wrap{
   width:80%;
   margin:0 auto;
@@ -157,19 +158,17 @@ img{max-width:100%;}
     color: #fff;
 }
 ul#header-img h2 {
-   margin-left: 4%;
-    text-transform: capitalize;
     color: #fff;
-    font-size: 2em;
+    font-size: 1.8em;
     background: rgba(91, 89, 82, 0.4);
-    padding: 5px 20px;
+    padding:0.3%;
     float: left;
     font-style: normal;
     text-transform: uppercase;
     border: none;
       position: absolute;
     top: 37%;
-    left:75px;
+    left:30%;
     z-index: 999;
 }
 
@@ -216,9 +215,9 @@ ul#header-img h2 {
 }
 .header-bottom-right{
   float:right;
-  width:30.5%;
+  width:26.5%;
   margin-top:10px;
-  padding-left: 30px;
+  padding-left: 1%;
  |}
 .search {
   background:#fff;
@@ -234,7 +233,7 @@ ul#header-img h2 {
   font-size:0.85em;
   font-family: 'Exo 2', sans-serif;
   color:#777;
-  width:130px;
+  width:84%;
   padding:7px;
   -webkit-apperance:none;
   margin:0;
@@ -252,7 +251,7 @@ ul#header-img h2 {
   outline:none;
   cursor: pointer;
   background: url("search.png") no-repeat 0px 3px; 
-  width:30px;
+  width:14%;
   height:25px;
   padding:8px;
 } 

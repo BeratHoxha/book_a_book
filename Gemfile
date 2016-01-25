@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'rails_admin'
 
+gem 'ads-rails'
+
 gem 'rename'
 
 gem 'email_validator'

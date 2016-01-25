@@ -1,4 +1,4 @@
-<section class="show-product left-right" style = "padding-top: 100px">
+<section class="show-product left-right" style = "margin-top: 80px;">
 	<div class="container">
 	<p id="notice"><%= notice %></p>
 		<div class="col-lg-4">
@@ -20,7 +20,8 @@
 				<h4><%= t('.author') %></h4>
 				<%= @product.author %>
 			</div>
-			<div style="margin: -33px 0 0 400px">
+			<br>
+			<div>
 				<h4><%= t('.category') %></h4>
 			<%= t('.tekno') if @product.category.eql?("Technology") %>
 			<%= t('.biznes') if @product.category.eql?("Business") %>
