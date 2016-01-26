@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
 
  def index
-
     products_technology = Product.search_by_category('Technology').all.shuffle[0..3]
     products_business = Product.search_by_category('Business').all.shuffle[0..3]
     products_history = Product.search_by_category('History').all.shuffle[0..3]
@@ -15,6 +14,8 @@ class ProductsController < ApplicationController
         else 
             @error = "\"#{params[:search].capitalize}\" not found"
         end
+     elsif params[:category]
+          @products = { params[:category] => Product.search_by_category(params[:category]).order("created_at DESC") }
      end
  end
 

@@ -110,7 +110,7 @@ en:
       username_or_email: "Username or Email"
       password:          "Password"
       rememberme:        "Remember Me"
-      LOGIN:             "LOG IN"
+      LOGIN:             "LOGIN"
 
   line_items:
     line_item:

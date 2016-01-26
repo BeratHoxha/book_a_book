@@ -37,6 +37,7 @@ html, body {
 height: 100%;
 }
 .body2 {
+padding-bottom: 70px;
 min-height: 100%;
 height: auto !important;
 height: 100%;
@@ -132,6 +133,7 @@ h1{
 .header-bottom{
   background:#fff;
   padding:2% 0;
+  height: 133px;
 }
 .logo{
   float:left;
@@ -381,11 +383,18 @@ ul#header-img h2 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
-
-
-
-
+ ul li .dropdown button{
+   color:rgba(0, 0, 255, 0.71);
+   margin:-15px 0px 0 10px;
+   font-size: 20px
+ }
+ ul li .dropdown button:hover,
+ ul li .dropdown button:focus,    
+ ul li .dropdown button:active{
+    background-color: transparent;  
+   color:rgba(0, 0, 255, 0.71);
+   border-color: transparent;
+ }
 
 
 
