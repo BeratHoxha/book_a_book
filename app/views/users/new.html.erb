@@ -1,7 +1,8 @@
 <div id = "body_new-user" class="container-fluid" style = "margin-top:65px;">
  <header style = "margin-left: 3%;">
   <h1><%= t('.sign_up') %> </br> <%= t('.free') %></h1>
-</header>       
+</header> 
+      
 <div  class="form">
   <%= form_for(:user) do |f| %>
 
@@ -21,12 +22,18 @@
     <p class="contact"><label for="repassword"> <%= t('.confirm_password')%> </label></p> 
     <%= f.password_field(:password, type: "password", class: "form-control", placeholder: t('.pass2')) %>
 
+    <%= f.label :date_of_birth %></br>
+    <%= f.date_select :date_of_birth, :discard_minute => true, :discard_hour => true, :start_year => 1950%>
     <br><br>
+
+    <%= f.label :gender %></br>
+   <span class="option" >Male<span><%= f.radio_button :gender, "Male" %>
+   <span class="option" >Female<span><%= f.radio_button :gender, "Female" %></br></br>
 
     <%= f.submit t('.register'), class: 'btn btn-primary' %>
 
-  <% end %>
 
-</div>      
+  <% end %>
+</div><br><br>        
 </div>
 </div>
