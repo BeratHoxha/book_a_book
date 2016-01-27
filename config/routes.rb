@@ -24,7 +24,9 @@ Rails.application.routes.draw do
 
   get 'bills/show', as: :credit_bill  
 
-  get 'bills/index', as: :bills    
+  get 'bills/index', as: :bills   
+
+  post 'likes/create', as: :like 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -28,13 +28,25 @@
 			<%= t('.history') if @product.category.eql?("History") %>
 			</div>
 		</li><br/><br/>
-		<li>  
-			
+		
+		<li>  			
+			<% if current_user %>
+				<% unless liked(current_user.id, @product.id) %>
+						<li><%= button_to like_path(product_id: @product), class:"btn btn-default" do  %>
+							<span class="glyphicon glyphicon-thumbs-up"></span> Like  
+							<% end %>
+						</li>
+						<%=  @product.likes_count %> People like this
+				<%else %>				
+						You <%=  @product.likes_count > 1 ? " and #{@product.likes_count-1} other liked this book" : "liked this book" %> 
+				<%end %>
+			<%end %>		
 			<% if current_user %>
 			<div style="margin-top: 25px">
 			    <%= button_to t('.add_to_cart'), line_items_path(product_id: @product), class:'btn btn-info' %>	
 			</div>
 			<% end %>
+
 			<div style=" margin: -35px 40px 0 0; float:right;">
 				<%= button_to t('.back'), products_path, class: 'btn btn-default', :method => :get%>
 			</div>

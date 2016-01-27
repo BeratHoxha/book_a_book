@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160126081416) do
+ActiveRecord::Schema.define(version: 20160127123708) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -36,6 +36,17 @@ ActiveRecord::Schema.define(version: 20160126081416) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.boolean  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "likes", ["product_id"], name: "index_likes_on_product_id"
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id"
 
   create_table "line_items", force: :cascade do |t|
     t.integer  "product_id"
@@ -63,11 +74,12 @@ ActiveRecord::Schema.define(version: 20160126081416) do
     t.text     "description"
     t.string   "image_url"
     t.decimal  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "isbn"
     t.string   "author"
     t.string   "category"
+    t.integer  "likes_count", default: 0
   end
 
   create_table "users", force: :cascade do |t|
